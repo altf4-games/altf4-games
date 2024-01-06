@@ -1,16 +1,43 @@
-### Hi there 👋
+# Hi there, I'm Pradyum Mistry! 👋
 
-<!--
-**AltF4-Games/AltF4-Games** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A passionate programmer with experience in game development, web development and competitive programming.
+Here's a glimpse of my skill set:
 
-Here are some ideas to get you started:
+### Languages & Tools:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Rust](https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust)
+![C](https://img.shields.io/badge/-C-00599C?style=for-the-badge&logo=c)
+![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp)
+![C++](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python)
+![HTML](https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3)
+
+![Unity](https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity)
+![Unreal Engine](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine)
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
+![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
+![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
+
+### Achievements:
+
+- **Crackathon 2023 - Finalists**
+- Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.
+
+### How to Reach Me:
+
+- Email: [pradyum_mistry@protonmail.com](mailto:pradyum_mistry@protonmail.com)
+
+### Connect with Me:
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pradyum-mistry/)
+
+### My GitHub Stats:
+
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical)
+
+### Most Used Languages:
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AltF4-Games&layout=compact&theme=radical)
