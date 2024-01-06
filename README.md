@@ -30,9 +30,10 @@ Here's a glimpse of my skill set:
 
 - Email: [pradyum_mistry@protonmail.com](mailto:pradyum_mistry@protonmail.com)
 
-### Connect with Me:
+### Follow Me:
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pradyum-mistry/)
+<a href="https://altf4-games.itch.io/" target="_blank"><img src="https://static.itch.io/images/logo-white-new.svg" width="64" height="32"></a>
 
 ### My GitHub Stats:
 
