@@ -22,7 +22,7 @@ Here's a glimpse of my skill set:
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
 
 ### Achievements:
-
+- **Total Game Downloads - 100k+**
 - **Crackathon 2023 - Finalists**
 - Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.
 
