@@ -24,7 +24,8 @@ Here's a glimpse of my skill set:
 ### Achievements:
 - **Total Game Downloads - 100k+**
 - **Crackathon 2023 - Finalists**
-- Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.
+- **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
+- **Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.**
 
 ### How to Reach Me:
 
