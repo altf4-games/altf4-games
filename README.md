@@ -19,6 +19,7 @@ Here's a glimpse of my skill set:
 ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
 ![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
 
 ### Achievements:
