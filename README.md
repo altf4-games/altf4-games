@@ -28,6 +28,7 @@ Here's a glimpse of my skill set:
 - **Crackathon 2023 - Finalists**
 - **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
 - **Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.**
+- **Games Featured by Renowned YouTubers with 20M+ Subscribers**
 
 ### How to Reach Me:
 
