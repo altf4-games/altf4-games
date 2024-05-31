@@ -5,15 +5,15 @@ Here's a glimpse of my skill set:
 
 ### Languages & Tools:
 
-![Rust](https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust)
 ![C](https://img.shields.io/badge/-C-00599C?style=for-the-badge&logo=c)
-![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp)
 ![C++](https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B)
+![C#](https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5)
 ![CSS](https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3)
+![Rust](https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust)
 
 ![Unity](https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity)
 ![Unreal Engine](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine)
@@ -21,12 +21,15 @@ Here's a glimpse of my skill set:
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
 ![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![ThreeJs](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
+
+
 
 ### Achievements:
 - **Total Game Downloads - 100k+**
-- **Crackathon 2023 - Finalists**
 - **KSP Datathon 2024 - Top 50**
+- **Crackathon 2023 - Finalists**
 - **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
 - **Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.**
 - **Games Featured by Renowned YouTubers with 20M+ Subscribers**
