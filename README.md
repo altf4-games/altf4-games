@@ -17,26 +17,23 @@ Here's a glimpse of my skill set:
 
 ![Unity](https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity)
 ![Unreal Engine](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine)
-![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![ThreeJs](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql)
 
 
 
 ### Achievements:
 - **Total Game Downloads - 100k+**
 - **KSP Datathon 2024 - Top 50**
-- **Crackathon 2023 - Finalists**
 - **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
 - **Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.**
 - **Games Featured by Renowned YouTubers with 20M+ Subscribers**
 
-### How to Reach Me:
-
-- Email: [pradyum_mistry@protonmail.com](mailto:pradyum_mistry@protonmail.com)
 
 ### Follow Me:
 
