@@ -26,7 +26,6 @@ Here's a glimpse of my skill set:
 ![ThreeJs](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 
 
-
 ### Achievements:
 - **Total Game Downloads - 100k+**
 - **KSP Datathon 2024 - Top 50**
@@ -42,7 +41,9 @@ Here's a glimpse of my skill set:
 
 ### My GitHub Stats:
 
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical)
+
+![GitHub Views](https://komarev.com/ghpvc/?username=altf4-games)
 
 ### Most Used Languages:
 
