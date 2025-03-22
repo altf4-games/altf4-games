@@ -27,11 +27,11 @@ Here's a glimpse of my skill set:
 
 
 ### Achievements:
+- **3 Star CodeChef Rating**
 - **Total Game Downloads - 200k+**
 - **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**
 - **KSP Datathon 2024 - Top 50**
 - **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
-- **Ranked #87 (Top 9%) in a game jam with 923 entries, creating a game in just 7 days.**
 - **Games Featured by Renowned YouTubers with 20M+ Subscribers**
 
 
@@ -42,10 +42,12 @@ Here's a glimpse of my skill set:
 
 ### My GitHub Stats:
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical)
-
 ![GitHub Views](https://komarev.com/ghpvc/?username=altf4-games)
 
-### Most Used Languages:
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AltF4-Games&layout=compact&theme=radical)
+
+### LeetCode Stats
+
+![LeetCode Stats](https://leetcard.jacoblin.cool/pradyum_mistry?theme=dark&font=Varela&ext=contest)
