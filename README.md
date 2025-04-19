@@ -1,6 +1,6 @@
 # Hi there, I'm Pradyum Mistry! 👋
 
-A passionate programmer with experience in game development, web development and competitive programming.
+Passionate about building scalable web applications, developing immersive games with Unreal Engine 5 and Unity Engine, and exploring AI/ML applications. Experienced in full-stack development, and problem-solving, with a 3-star rating on CodeChef. Always open to collaboration and new challenges in technology.
 Here's a glimpse of my skill set:
 
 ### Languages & Tools:
