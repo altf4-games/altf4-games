@@ -30,6 +30,8 @@ Here's a glimpse of my skill set:
 - **3 Star CodeChef Rating**
 - **Total Game Downloads - 200k+**
 - **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**
+- **IDEA Hackathon - Finalist**
+- **KJSSE HACK 8 - Top 6 Finish**
 - **KSP Datathon 2024 - Top 50**
 - **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam.**
 - **Games Featured by Renowned YouTubers with 20M+ Subscribers**
