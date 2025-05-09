@@ -15,16 +15,7 @@ Here's a glimpse of my skill set:
 ![CSS](https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3)
 ![Rust](https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust)
 
-![Unity](https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity)
-![Unreal Engine](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine)
-![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)
-![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)
-![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![ThreeJs](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
-
+![Unity](https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity)  ![Unreal Engine](https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine)  ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)  ![Express](https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express)  ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react)  ![React Native](https://img.shields.io/badge/-React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=white)  ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)  ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase)  ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)  ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)  ![ThreeJs](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)  ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)  ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 ### Achievements:
 - **3 Star CodeChef Rating**
