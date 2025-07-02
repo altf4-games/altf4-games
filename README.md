@@ -1,6 +1,6 @@
 # Hi there, I'm Pradyum Mistry! 👋
 
-Passionate about building scalable web applications, developing immersive games with Unreal Engine 5 and Unity Engine, and exploring AI/ML applications. Experienced in full-stack development, and problem-solving, with a 3-star rating on CodeChef. Always open to collaboration and new challenges in technology.  
+I enjoy working on web apps, making games with Unreal Engine 5 and Unity, and exploring AI and machine learning. I have experience with full-stack development and problem solving, and I’m a 3-star coder on CodeChef. I’m always open to learning new things and working with others on interesting projects.
 Here's a glimpse of my skill set:
 
 ### Languages & Tools:
