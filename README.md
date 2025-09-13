@@ -1,7 +1,6 @@
 # <div align="center">![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Pradyum+Mistry!;Game+Developer+%26+Full+Stack;AI%2FML+Enthusiast;Welcome+to+my+GitHub!)</div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" width="50" />
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=3+Star+CodeChef+Coder;200k%2B+Game+Downloads;Hackathon+Winner" alt="Typing SVG" />
 </div>
 
