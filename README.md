@@ -28,8 +28,6 @@ I enjoy working on web apps, making games with **Unreal Engine 5** and **Unity**
 
 <div align="center">
 
-### Programming Languages
-<p>
   <img src="https://img.shields.io/badge/-C-00599C?style=for-the-badge&logo=c" />
   <img src="https://img.shields.io/badge/-C++-00599C?style=for-the-badge&logo=c%2B%2B" />
   <img src="https://img.shields.io/badge/-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" />
@@ -37,51 +35,34 @@ I enjoy working on web apps, making games with **Unreal Engine 5** and **Unity**
   <img src="https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/-Java-007396?style=for-the-badge&logo=java&logoColor=white" />
   <img src="https://img.shields.io/badge/-Dart-0175C2?style=for-the-badge&logo=dart" />
-</p>
-
-### Frontend Development
-<p>
+  <img src="https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
   <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/-HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-</p>
-
-### Backend & Database
-<p>
   <img src="https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
   <img src="https://img.shields.io/badge/-Express-000000?style=for-the-badge&logo=express" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase" />
-</p>
-
-### Game Development & Mobile
-<p>
   <img src="https://img.shields.io/badge/-Unity-000000?style=for-the-badge&logo=unity" />
   <img src="https://img.shields.io/badge/-Unreal%20Engine-313131?style=for-the-badge&logo=unreal-engine" />
   <img src="https://img.shields.io/badge/-Flutter-02569B?style=for-the-badge&logo=flutter" />
   <img src="https://img.shields.io/badge/-React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
-</p>
-
-### AI/ML & Other Tools
-<p>
   <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" />
   <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
   <img src="https://img.shields.io/badge/-Socket.IO-010101?style=for-the-badge&logo=socket.io" />
-</p>
+
 
 </div>
 
 ## 🏆 Achievements
 
 <div align="center">
-
-🏆 **Won Most Addictive Game** - 8th Wall Forge the Future Game Jam (Hackathon)  
+  
 ⭐ **3 Star CodeChef Rating**  
-📱 **Total Game Downloads - 200k+**  
+🏆 **Won Most Addictive Game** - 8th Wall Forge the Future Game Jam (Hackathon)   
 🌐 **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**  
 💡 **IDEA Hackathon - Finalist**  
 🚀 **KJSSE HACK 8 - Top 6 Finish**  
