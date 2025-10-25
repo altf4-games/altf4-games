@@ -1,7 +1,5 @@
 # Hi there, I'm Pradyum Mistry! 👋
 
-**Game Developer | Full Stack Developer | AI/ML Enthusiast**
-
 ## About Me
 
 I have experience spanning **AI/ML**, **Full Stack Development**, **App Development**, **Game Development**, **Competitive Programming**, and **Web3**, with a specialization in **Game Development** using **Unreal Engine 5** and **Unity**. I'm a **3-star coder on CodeChef** with **200k+ game downloads** across platforms.
@@ -45,16 +43,8 @@ I have experience spanning **AI/ML**, **Full Stack Development**, **App Developm
 - 🌐 **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**
 - 💡 **IDEA Hackathon - Finalist**
 - 🚀 **KJSSE HACK 8 - Top 6 Finish**
-- 📊 **KSP Datathon 2024 - Top 50**
 - 🎮 **Honorable Mention** - 3-day competitive game jam
 - 🌟 **Games Featured by YouTubers** with 20M+ Subscribers (Markiplier, Jacksepticeye)
-
-## GitHub Stats
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AltF4-Games&layout=compact&langs_count=8&theme=radical"/>
-</div>
 
 ## Connect
 
