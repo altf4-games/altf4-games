@@ -1,30 +1,12 @@
-# <div align="center">![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Pradyum+Mistry!;Game+Developer+%26+Full+Stack;AI%2FML+Enthusiast;Welcome+to+my+GitHub!)</div>
+# Hi there, I'm Pradyum Mistry! 👋
 
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=3+Star+CodeChef+Coder;200k%2B+Game+Downloads;Hackathon+Winner" alt="Typing SVG" />
-</div>
+**Game Developer | Full Stack Developer | AI/ML Enthusiast**
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=altf4-games&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
-  <img src="https://img.shields.io/github/followers/altf4-games?label=Followers&style=for-the-badge&color=blue" alt="Followers" />
-</p>
+## About Me
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Medium%20Skin%20Tone.png" width="35" /> About Me
+I have experience spanning **AI/ML**, **Full Stack Development**, **App Development**, **Game Development**, **Competitive Programming**, and **Web3**, with a specialization in **Game Development** using **Unreal Engine 5** and **Unity**. I'm a **3-star coder on CodeChef** with **200k+ game downloads** across platforms.
 
-<img align="right" alt="Coding" width="400" src="https://i.giphy.com/ZVik7pBtu9dNS.webp">
-
-I enjoy working on web apps, making games with **Unreal Engine 5** and **Unity**, and exploring **AI and machine learning**. I have experience with full-stack development and problem solving, and I'm a **3-star coder on CodeChef**. I'm always open to learning new things and working with others on interesting projects.
-
-- 🎮 **Passionate about:** Game Development & Full-Stack Web Apps
-- 🤖 **Exploring:** AI/ML & Cutting-edge Technologies  
-- ⭐ **CodeChef:** 3-Star Rating
-- 📱 **Game Downloads:** 200k+ across all platforms
-- 🏆 **Hackathon Enthusiast:** Multiple wins & top finishes
-- 💡 **Always:** Open to collaborating on interesting projects
-
-<br clear="both">
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="35" /> Languages & Tools
+## Tech Stack
 
 <div align="center">
 
@@ -54,61 +36,33 @@ I enjoy working on web apps, making games with **Unreal Engine 5** and **Unity**
   <img src="https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
   <img src="https://img.shields.io/badge/-Socket.IO-010101?style=for-the-badge&logo=socket.io" />
 
-
 </div>
 
-## 🏆 Achievements
+## Achievements
 
-<div align="center">
-  
-⭐ **3 Star CodeChef Rating**  
-🏆 **Won Most Addictive Game** - 8th Wall Forge the Future Game Jam (Hackathon)   
-🌐 **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**  
-💡 **IDEA Hackathon - Finalist**  
-🚀 **KJSSE HACK 8 - Top 6 Finish**  
-📊 **KSP Datathon 2024 - Top 50**  
-🎮 **Received honorable mention for a game developed within a tight 3-day timeframe during a competitive game jam**  
-🌟 **Games Featured by Renowned YouTubers (Markiplier, Jacksepticeye, ...) with 20M+ Subscribers**
+- ⭐ **3 Star CodeChef Rating**
+- 🏆 **Won Most Addictive Game** - 8th Wall Forge the Future Game Jam
+- 🌐 **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**
+- 💡 **IDEA Hackathon - Finalist**
+- 🚀 **KJSSE HACK 8 - Top 6 Finish**
+- 📊 **KSP Datathon 2024 - Top 50**
+- 🎮 **Honorable Mention** - 3-day competitive game jam
+- 🌟 **Games Featured by YouTubers** with 20M+ Subscribers (Markiplier, Jacksepticeye)
 
-</div>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="35" /> GitHub Analytics
+## GitHub Stats
 
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AltF4-Games&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AltF4-Games&layout=compact&langs_count=8&theme=radical"/>
 </div>
 
-<div align="center">
-  <img width="600" src="https://github-readme-streak-stats.herokuapp.com/?user=AltF4-Games&theme=radical&hide_border=true&stroke=0000&background=0D1117" />
-</div>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Detective%20Medium%20Skin%20Tone.png" width="35" /> Coding Profiles
-
-<div align="center">
-
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/pradyum_mistry/)
-[![CodeChef](https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/pradyum_m)
-
-</div>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Detective%20Medium%20Skin%20Tone.png" width="35" /> LeetCode Stats
-
-<div align="center">
-  <img src="https://leetcard.jacoblin.cool/pradyum_mistry?theme=dark&font=Varela&ext=contest" />
-</div>
-
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" /> Connect With Me
+## Connect
 
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/pradyum-mistry/)
 [![Itch.io](https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://altf4-games.itch.io/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/pradyum_mistry/)
+[![CodeChef](https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/pradyum_m)
 
-</div>
-
----
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" />
 </div>
