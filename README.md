@@ -38,7 +38,7 @@ I have experience spanning **AI/ML**, **Full Stack Development**, **App Developm
 
 ## Achievements
 
-- ⭐ **4 Star CodeChef Rating**
+- ⭐ **4 Star CodeChef & Codeforces Specialist**
 - 🏆 **Won Most Addictive Game** - 8th Wall Forge the Future Game Jam
 - 🏆 **First Runner Up** - ISTE KJSSE Pixel Wars
 - 🌐 **I ❤️ Hackathon: Pune Web3 Edition - Top 10 Finish** for developing **Voyage3**
