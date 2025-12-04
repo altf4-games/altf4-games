@@ -47,6 +47,12 @@ I have experience spanning **AI/ML**, **Full Stack Development**, **App Developm
 - 🎮 **Honorable Mention** - 3-day competitive game jam
 - 🌟 **Games Featured by YouTubers** with 20M+ Subscribers (Markiplier, Jacksepticeye)
 
+## GitHub Contribution Snake
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/altf4-games/altf4-games/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+</div>
+
 ## Connect
 
 <div align="center">
