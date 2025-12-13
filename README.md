@@ -2,7 +2,7 @@
 
 ## About Me
 
-I have experience spanning **AI/ML**, **Full Stack Development**, **App Development**, **Game Development**, **Competitive Programming**, and **Web3**, with a specialization in **Game Development** using **Unreal Engine 5** and **Unity**. I'm a **3-star coder on CodeChef** with **200k+ game downloads** across platforms.
+I have experience spanning **AI/ML**, **Full Stack Development**, **App Development**, **Game Development**, **Competitive Programming**, and **Web3**, with a specialization in **Game Development** using **Unreal Engine 5** and **Unity**. I'm a **4-star coder on CodeChef** with **200k+ game downloads** across platforms.
 
 ## Tech Stack
 
