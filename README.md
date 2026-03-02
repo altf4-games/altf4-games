@@ -38,9 +38,9 @@ I have experience spanning **AI/ML**, **Full Stack Development**, **App Developm
 
 ## Achievements
 
-- ⭐ **4★ CodeChef** 
-- 🏆 **Winner – Most Addictive Game** (8th Wall Forge the Future Game Jam) | 🥈 **First Runner-Up** (ISTE KJSSE Pixel Wars)  
-- 🌐 **Top 10 – I ❤️ Hackathon Pune Web3 Edition** (*Voyage3*) | 💡 **IDEA Hackathon Finalist** | 🚀 **Top 6 – KJSSE HACK 8**  
+- ⭐ **4★ CodeChef**
+- 🏆 **Winner – Most Addictive Game** (8th Wall Forge the Future Game Jam) | 🥈 **First Runner-Up** (ISTE KJSSE Pixel Wars)
+- 🌐 **Top 10 – I ❤️ Hackathon Pune Web3 Edition** | 💡 **IDEA Hackathon Finalist** | 🚀 **Top 6 – KJSSE HACK 8** | 🧠 **Top 6 – ACM AfterMath Hackathon**
 - 🎮 **Honorable Mention** (3-Day Game Jam) | 🌟 **Games featured by Markiplier & Jacksepticeye (20M+ subs)**
 
 
