@@ -58,5 +58,8 @@ I have experience spanning **AI/ML**, **Full Stack Development**, **App Developm
 [![Itch.io](https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://altf4-games.itch.io/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/pradyum_mistry/)
 [![CodeChef](https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white)](https://www.codechef.com/users/pradyum_m)
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=altf4-games&style=for-the-badge&color=blue" alt="Profile Views" />
+</div>
 
 </div>
