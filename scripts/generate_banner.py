@@ -14,6 +14,7 @@ import time
 import html
 import datetime
 import requests
+from html.parser import HTMLParser as _HTMLParser
 
 USERNAME = os.environ.get("GH_USERNAME", "altf4-games")
 TOKEN = os.environ.get("GITHUB_TOKEN")
@@ -25,6 +26,91 @@ if TOKEN:
 FONT_FAMILY = "'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',monospace"
 SESSION = requests.Session()
 SESSION.headers.update(HEADERS)
+
+
+# ---------------------------------------------------------------------------
+# Colored ASCII-art loader  (parses ascii-art.html if present in repo root)
+# ---------------------------------------------------------------------------
+
+class _AsciiParser(_HTMLParser):
+    """Minimal SAX-style parser: collects (char, color) pairs row-by-row."""
+    def __init__(self):
+        super().__init__()
+        self.rows = [[]]
+        self._color = "#888888"
+        self._in_body = False   # only collect data inside <body>
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "body":
+            self._in_body = True
+            return
+        if tag == "br":
+            if self._in_body:
+                self.rows.append([])
+            return
+        if tag == "span":
+            style = dict(attrs).get("style", "")
+            if "color:" in style:
+                self._color = style.split("color:")[1].split(";")[0].strip()
+
+    def handle_startendtag(self, tag, attrs):
+        if tag == "br" and self._in_body:
+            self.rows.append([])
+
+    def handle_data(self, data):
+        if not self._in_body:
+            return
+        for ch in data:
+            if ch == "\n":
+                continue
+            self.rows[-1].append((ch, self._color))
+
+
+
+def load_ascii_art(path="ascii-art.html"):
+    """Returns list-of-rows, each row = [(char, '#rrggbb'), ...], or None."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            content = f.read()
+        parser = _AsciiParser()
+        parser.feed(content)
+        rows = [r for r in parser.rows if r]   # drop empty rows
+        return rows or None
+    except Exception:
+        return None
+
+
+def ascii_art_svg(art_rows, x, start_y, col_width, esc_fn):
+    """Render colored ASCII art rows as SVG text elements.
+    Scales font-size to fit col_width. Returns (elements, font_size, line_h)."""
+    if not art_rows:
+        return [], 8, 9
+    max_cols = max(len(r) for r in art_rows)
+    # char_width ≈ 0.60 × font-size for monospace
+    font_size = max(5, min(10, int(col_width / (max_cols * 0.60))))
+    line_h = font_size * 1.15
+    elements = []
+    for row_idx, row in enumerate(art_rows):
+        y = start_y + row_idx * line_h
+        # group consecutive same-color chars → smaller SVG output
+        groups = []
+        i = 0
+        while i < len(row):
+            ch, color = row[i]
+            j = i + 1
+            while j < len(row) and row[j][1] == color:
+                j += 1
+            groups.append((color, "".join(c for c, _ in row[i:j])))
+            i = j
+        tspans = "".join(
+            f'<tspan fill="{color}">{esc_fn(chars)}</tspan>'
+            for color, chars in groups
+        )
+        elements.append(
+            f'<text x="{x}" y="{y:.1f}" font-size="{font_size}" '
+            f'font-family="monospace" xml:space="preserve">{tspans}</text>'
+        )
+    return elements, font_size, line_h
 
 
 # ---------------------------------------------------------------------------
@@ -339,8 +425,19 @@ def render_svg(stats, theme_name):
     right_width_chars = 70   # wider — fits longer values without truncation
     width = 1280             # slightly wider canvas to accommodate extra chars
 
+    art_col_width = right_x - pad_x - 10   # ~460 px available
+    art_file = "ascii-art_light.html" if theme_name == "light" else "ascii-art.html"
+    art_rows = load_ascii_art(art_file)
+    if not art_rows and theme_name == "light":
+        art_rows = load_ascii_art("ascii-art.html")
+    if art_rows:
+        svg_els, _fs, _lh = ascii_art_svg(art_rows, pad_x, pad_top, art_col_width, esc)
+        art_h = len(art_rows) * _lh
+        left_h = pad_top + art_h + 70
+    else:
+        left_h = pad_top + len(ASCII_LOGO) * logo_line_h + 70
+
     right_h = pad_top + len(rows) * line_h + 30
-    left_h = pad_top + len(ASCII_LOGO) * logo_line_h + 70
     height = int(max(right_h, left_h))
 
     p = []
@@ -360,15 +457,21 @@ def render_svg(stats, theme_name):
         f'fill="{t["title_gray"]}">{esc(title)}</text>'
     )
 
-    # left column: ascii logo
+    # left column: colored ASCII art (falls back to text logo if file missing)
     y = pad_top
-    p.append(f'<text x="{pad_x}" y="{y}" font-size="12" font-weight="bold" fill="{t["logo"]}" xml:space="preserve">')
-    for i, line in enumerate(ASCII_LOGO):
-        dy = 0 if i == 0 else logo_line_h
-        p.append(f'<tspan x="{pad_x}" dy="{dy}">{esc(line) if line else " "}</tspan>')
-    p.append("</text>")
-    footer_y = y + len(ASCII_LOGO) * logo_line_h + 34
-    p.append(f'<text x="{pad_x}" y="{footer_y}" font-size="13" fill="{t["title_gray"]}">github.com/{esc(USERNAME)}</text>')
+    if art_rows:
+        svg_els, _fs, _lh = ascii_art_svg(art_rows, pad_x, y, art_col_width, esc)
+        p.extend(svg_els)
+        art_bottom = y + art_h
+    else:
+        p.append(f'<text x="{pad_x}" y="{y}" font-size="12" font-weight="bold" fill="{t["logo"]}" xml:space="preserve">')
+        for i, line in enumerate(ASCII_LOGO):
+            dy = 0 if i == 0 else logo_line_h
+            p.append(f'<tspan x="{pad_x}" dy="{dy}">{esc(line) if line else " "}</tspan>')
+        p.append("</text>")
+        art_bottom = y + len(ASCII_LOGO) * logo_line_h
+    footer_y = art_bottom + 26
+    p.append(f'<text x="{pad_x}" y="{footer_y:.0f}" font-size="13" fill="{t["title_gray"]}">github.com/{esc(USERNAME)}</text>')
 
     # right column: info block
     iy = pad_top
