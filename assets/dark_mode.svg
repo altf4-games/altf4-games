@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1215" viewBox="0 0 1280 1215" font-family="'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',monospace">
-<rect x="0" y="0" width="1280" height="1215" rx="16" fill="#0b0e14"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1068" viewBox="0 0 1280 1068" font-family="'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',monospace">
+<rect x="0" y="0" width="1280" height="1068" rx="16" fill="#0b0e14"/>
 <rect x="0" y="0" width="1280" height="42" rx="16" fill="#171a21"/>
 <rect x="0" y="21" width="1280" height="21" fill="#171a21"/>
 <circle cx="22" cy="21" r="6" fill="#ff5f56"/>
@@ -31,42 +31,36 @@
 <text x="506" y="177" font-size="13"><tspan fill="#d7dae0">. Packages: </tspan><tspan fill="#4b5262">..................................</tspan><tspan fill="#e8eaee"> npm · pip · pub · gradle</tspan></text>
 <text x="506" y="198" font-size="13"><tspan fill="#d7dae0">. Shell: </tspan><tspan fill="#4b5262">......................................</tspan><tspan fill="#e8eaee"> zsh / bash / powershell</tspan></text>
 <text x="506" y="219" font-size="13"><tspan fill="#d7dae0">. DE: </tspan><tspan fill="#4b5262">.................................................</tspan><tspan fill="#e8eaee"> VS Code (Dark+)</tspan></text>
-<text x="506" y="240" font-size="13"><tspan fill="#d7dae0">. WM: </tspan><tspan fill="#4b5262">............................................................</tspan><tspan fill="#e8eaee"> tmux</tspan></text>
-<text x="506" y="261" font-size="13"><tspan fill="#d7dae0">. Terminal: </tspan><tspan fill="#4b5262">..............................</tspan><tspan fill="#e8eaee"> Alacritty / Windows Terminal</tspan></text>
-<text x="506" y="282" font-size="13"><tspan fill="#d7dae0">. CPU: </tspan><tspan fill="#4b5262">...................</tspan><tspan fill="#e8eaee"> Brain @ overclocked, severely sleep-deprived</tspan></text>
-<text x="506" y="303" font-size="13"><tspan fill="#d7dae0">. GPU: </tspan><tspan fill="#4b5262">............................</tspan><tspan fill="#e8eaee"> Imagination Engine (unlimited VRAM)</tspan></text>
-<text x="506" y="324" font-size="13"><tspan fill="#d7dae0">. Memory: </tspan><tspan fill="#4b5262">.......................</tspan><tspan fill="#e8eaee"> 16GB RAM, mostly filled with LeetCode</tspan></text>
-<text x="506" y="366" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Languages</tspan><tspan fill="#4b5262"> ----------------------------------------------------------</tspan></text>
-<text x="506" y="387" font-size="13"><tspan fill="#d7dae0">. Languages.Programming: </tspan><tspan fill="#4b5262">...............</tspan><tspan fill="#e8eaee"> C, C++, C#, Java, Python, Dart</tspan></text>
-<text x="506" y="408" font-size="13"><tspan fill="#d7dae0">. Languages.Scripting: </tspan><tspan fill="#4b5262">.........................</tspan><tspan fill="#e8eaee"> JavaScript, TypeScript</tspan></text>
-<text x="506" y="429" font-size="13"><tspan fill="#d7dae0">. Languages.Web: </tspan><tspan fill="#4b5262">.......................................</tspan><tspan fill="#e8eaee"> HTML, CSS, SQL</tspan></text>
-<text x="506" y="471" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Frameworks &amp; Tools</tspan><tspan fill="#4b5262"> -------------------------------------------------</tspan></text>
-<text x="506" y="492" font-size="13"><tspan fill="#d7dae0">. Frameworks.Frontend: </tspan><tspan fill="#4b5262">.......................</tspan><tspan fill="#e8eaee"> React, Next.js, Three.js</tspan></text>
-<text x="506" y="513" font-size="13"><tspan fill="#d7dae0">. Frameworks.Backend: </tspan><tspan fill="#4b5262">...............</tspan><tspan fill="#e8eaee"> Node.js, Express, FastAPI, Spring</tspan></text>
-<text x="506" y="534" font-size="13"><tspan fill="#d7dae0">. Frameworks.Mobile: </tspan><tspan fill="#4b5262">............................</tspan><tspan fill="#e8eaee"> Flutter, React Native</tspan></text>
-<text x="506" y="555" font-size="13"><tspan fill="#d7dae0">. Frameworks.AI: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#e8eaee"> TensorFlow, TFLite, Scikit-learn, MediaPipe</tspan></text>
-<text x="506" y="576" font-size="13"><tspan fill="#d7dae0">. Frameworks.Game: </tspan><tspan fill="#4b5262">.............................</tspan><tspan fill="#e8eaee"> Unity, Unreal Engine 5</tspan></text>
-<text x="506" y="597" font-size="13"><tspan fill="#d7dae0">. Databases: </tspan><tspan fill="#4b5262">.....................</tspan><tspan fill="#e8eaee"> MongoDB, PostgreSQL, Redis, Firebase</tspan></text>
-<text x="506" y="618" font-size="13"><tspan fill="#d7dae0">. DevOps: </tspan><tspan fill="#4b5262">..............................</tspan><tspan fill="#e8eaee"> Git, Docker, Socket.io, Judge0</tspan></text>
-<text x="506" y="660" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Open Source</tspan><tspan fill="#4b5262"> --------------------------------------------------------</tspan></text>
-<text x="506" y="681" font-size="13"><tspan fill="#d7dae0">. Hobbies.OSS: </tspan><tspan fill="#4b5262">...........</tspan><tspan fill="#e8eaee"> microsoft/data-formulator #351 (MS Research)</tspan></text>
-<text x="506" y="702" font-size="13"><tspan fill="#d7dae0">. Hobbies.OSS: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#e8eaee"> microsoft/apm #1367</tspan></text>
-<text x="506" y="744" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Research &amp; Publications</tspan><tspan fill="#4b5262"> --------------------------------------------</tspan></text>
-<text x="506" y="765" font-size="13"><tspan fill="#d7dae0">. Hobbies.Research: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> CVR&#x27;26 Springer — Gesture-Based Assistive Tool</tspan></text>
-<text x="506" y="786" font-size="13"><tspan fill="#d7dae0">. Hobbies.IP: </tspan><tspan fill="#4b5262">.........</tspan><tspan fill="#e8eaee"> Sanketika ISL Dataset (Copyright LD-22598/2025)</tspan></text>
-<text x="506" y="828" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Achievements</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
-<text x="506" y="849" font-size="13"><tspan fill="#d7dae0">. Hobbies.CP: </tspan><tspan fill="#4b5262">...........</tspan><tspan fill="#e8eaee"> Codeforces Expert | CodeChef 4-Star | 500+ LC</tspan></text>
-<text x="506" y="870" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.......</tspan><tspan fill="#e8eaee"> Winner — Most Addictive Game (8th Wall Jam)</tspan></text>
-<text x="506" y="891" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.............</tspan><tspan fill="#e8eaee"> 1st Runner-Up — ISTE KJSCE Pixel Wars</tspan></text>
-<text x="506" y="912" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.....</tspan><tspan fill="#e8eaee"> Featured by Markiplier &amp; Jacksepticeye (20M+)</tspan></text>
-<text x="506" y="933" font-size="13"><tspan fill="#d7dae0">. Hobbies.Hardware: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 5x Hackathon Finalist (KJSSE, I&lt;3Hackathon...)</tspan></text>
-<text x="506" y="975" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Contact</tspan><tspan fill="#4b5262"> ------------------------------------------------------------</tspan></text>
-<text x="506" y="996" font-size="13"><tspan fill="#d7dae0">. Contact.LinkedIn: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#e8eaee"> pradyum-mistry</tspan></text>
-<text x="506" y="1017" font-size="13"><tspan fill="#d7dae0">. Contact.Itch.io: </tspan><tspan fill="#4b5262">........................................</tspan><tspan fill="#e8eaee"> altf4-games</tspan></text>
-<text x="506" y="1038" font-size="13"><tspan fill="#d7dae0">. Contact.LeetCode: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#e8eaee"> pradyum_mistry</tspan></text>
-<text x="506" y="1059" font-size="13"><tspan fill="#d7dae0">. Contact.CodeChef: </tspan><tspan fill="#4b5262">.........................................</tspan><tspan fill="#e8eaee"> pradyum_m</tspan></text>
-<text x="506" y="1101" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- GitHub Stats</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
-<text x="506" y="1122" font-size="13"><tspan fill="#d7dae0">. Repos: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 65 {Contributed: 5}</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">Stars: </tspan><tspan fill="#4b5262">........</tspan><tspan fill="#e8eaee"> 20</tspan></text>
-<text x="506" y="1143" font-size="13"><tspan fill="#d7dae0">. Commits: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#e8eaee"> 1,694</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">Followers: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 15</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">PRs: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 4</tspan></text>
-<text x="506" y="1164" font-size="13"><tspan fill="#d7dae0">. Lines of Code on GitHub: </tspan><tspan fill="#e8eaee">17,043,468 (</tspan><tspan fill="#4fd671"> 15,402,931++</tspan><tspan fill="#e8eaee">, </tspan><tspan fill="#e5677a">1,640,537--</tspan><tspan fill="#e8eaee"> )</tspan></text>
+<text x="506" y="240" font-size="13"><tspan fill="#d7dae0">. Terminal: </tspan><tspan fill="#4b5262">..............................</tspan><tspan fill="#e8eaee"> Alacritty / Windows Terminal</tspan></text>
+<text x="506" y="261" font-size="13"><tspan fill="#d7dae0">. CPU: </tspan><tspan fill="#4b5262">...................</tspan><tspan fill="#e8eaee"> Brain @ overclocked, severely sleep-deprived</tspan></text>
+<text x="506" y="282" font-size="13"><tspan fill="#d7dae0">. GPU: </tspan><tspan fill="#4b5262">............................</tspan><tspan fill="#e8eaee"> Imagination Engine (unlimited VRAM)</tspan></text>
+<text x="506" y="303" font-size="13"><tspan fill="#d7dae0">. Memory: </tspan><tspan fill="#4b5262">.......................</tspan><tspan fill="#e8eaee"> 16GB RAM, mostly filled with LeetCode</tspan></text>
+<text x="506" y="345" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Languages</tspan><tspan fill="#4b5262"> ----------------------------------------------------------</tspan></text>
+<text x="506" y="366" font-size="13"><tspan fill="#d7dae0">. Languages.Programming: </tspan><tspan fill="#4b5262">...............</tspan><tspan fill="#e8eaee"> C, C++, C#, Java, Python, Dart</tspan></text>
+<text x="506" y="387" font-size="13"><tspan fill="#d7dae0">. Languages.Scripting: </tspan><tspan fill="#4b5262">.........................</tspan><tspan fill="#e8eaee"> JavaScript, TypeScript</tspan></text>
+<text x="506" y="408" font-size="13"><tspan fill="#d7dae0">. Languages.Web: </tspan><tspan fill="#4b5262">.......................................</tspan><tspan fill="#e8eaee"> HTML, CSS, SQL</tspan></text>
+<text x="506" y="450" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Frameworks &amp; Tools</tspan><tspan fill="#4b5262"> -------------------------------------------------</tspan></text>
+<text x="506" y="471" font-size="13"><tspan fill="#d7dae0">. Frameworks.Web: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#e8eaee"> React, Next.js, Three.js, Express, FastAPI</tspan></text>
+<text x="506" y="492" font-size="13"><tspan fill="#d7dae0">. Frameworks.App: </tspan><tspan fill="#4b5262">.......</tspan><tspan fill="#e8eaee"> Flutter, React Native, Unity, Unreal Engine 5</tspan></text>
+<text x="506" y="513" font-size="13"><tspan fill="#d7dae0">. Frameworks.AI: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#e8eaee"> TensorFlow, TFLite, Scikit-learn, MediaPipe</tspan></text>
+<text x="506" y="534" font-size="13"><tspan fill="#d7dae0">. Databases: </tspan><tspan fill="#4b5262">.....................</tspan><tspan fill="#e8eaee"> MongoDB, PostgreSQL, Redis, Firebase</tspan></text>
+<text x="506" y="555" font-size="13"><tspan fill="#d7dae0">. DevOps: </tspan><tspan fill="#4b5262">.........................</tspan><tspan fill="#e8eaee"> Git, Docker, AWS, Socket.io, Judge0</tspan></text>
+<text x="506" y="597" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Open Source &amp; Research</tspan><tspan fill="#4b5262"> ---------------------------------------------</tspan></text>
+<text x="506" y="618" font-size="13"><tspan fill="#d7dae0">. Hobbies.OSS: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> microsoft/data-formulator #351, microsoft/apm #1367</tspan></text>
+<text x="506" y="639" font-size="13"><tspan fill="#d7dae0">. Hobbies.Research: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> CVR&#x27;26 Springer — Gesture-Based Assistive Tool</tspan></text>
+<text x="506" y="660" font-size="13"><tspan fill="#d7dae0">. Hobbies.IP: </tspan><tspan fill="#4b5262">.........</tspan><tspan fill="#e8eaee"> Sanketika ISL Dataset (Copyright LD-22598/2025)</tspan></text>
+<text x="506" y="702" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Achievements</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
+<text x="506" y="723" font-size="13"><tspan fill="#d7dae0">. Hobbies.CP: </tspan><tspan fill="#4b5262">...........</tspan><tspan fill="#e8eaee"> Codeforces Expert | CodeChef 4-Star | 500+ LC</tspan></text>
+<text x="506" y="744" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.......</tspan><tspan fill="#e8eaee"> Winner — Most Addictive Game (8th Wall Jam)</tspan></text>
+<text x="506" y="765" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.......</tspan><tspan fill="#e8eaee"> 1st Runner-Up ISTE Pixel Wars | 5x Finalist</tspan></text>
+<text x="506" y="786" font-size="13"><tspan fill="#d7dae0">. Hobbies.Software: </tspan><tspan fill="#4b5262">.....</tspan><tspan fill="#e8eaee"> Featured by Markiplier &amp; Jacksepticeye (20M+)</tspan></text>
+<text x="506" y="828" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- Contact</tspan><tspan fill="#4b5262"> ------------------------------------------------------------</tspan></text>
+<text x="506" y="849" font-size="13"><tspan fill="#d7dae0">. Contact.LinkedIn: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#e8eaee"> pradyum-mistry</tspan></text>
+<text x="506" y="870" font-size="13"><tspan fill="#d7dae0">. Contact.Itch.io: </tspan><tspan fill="#4b5262">........................................</tspan><tspan fill="#e8eaee"> altf4-games</tspan></text>
+<text x="506" y="891" font-size="13"><tspan fill="#d7dae0">. Contact.LeetCode: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#e8eaee"> pradyum_mistry</tspan></text>
+<text x="506" y="912" font-size="13"><tspan fill="#d7dae0">. Contact.CodeChef: </tspan><tspan fill="#4b5262">.........................................</tspan><tspan fill="#e8eaee"> pradyum_m</tspan></text>
+<text x="506" y="954" font-size="13"><tspan font-weight="bold" fill="#e8eaee">- GitHub Stats</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
+<text x="506" y="975" font-size="13"><tspan fill="#d7dae0">. Repos: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 65 {Contributed: 5}</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">Stars: </tspan><tspan fill="#4b5262">........</tspan><tspan fill="#e8eaee"> 20</tspan></text>
+<text x="506" y="996" font-size="13"><tspan fill="#d7dae0">. Commits: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#e8eaee"> 1,695</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">Followers: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 15</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#d7dae0">PRs: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#e8eaee"> 4</tspan></text>
+<text x="506" y="1017" font-size="13"><tspan fill="#d7dae0">. Lines of Code on GitHub: </tspan><tspan fill="#e8eaee">17,041,869 (</tspan><tspan fill="#4fd671"> 15,401,770++</tspan><tspan fill="#e8eaee">, </tspan><tspan fill="#e5677a">1,640,099--</tspan><tspan fill="#e8eaee"> )</tspan></text>
 </svg>
