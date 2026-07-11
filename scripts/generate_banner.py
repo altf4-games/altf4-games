@@ -226,7 +226,6 @@ def build_lines(stats):
     rows.append(("kv", "Packages", "npm · pip · pub · gradle"))
     rows.append(("kv", "Shell",    "zsh / bash / powershell"))
     rows.append(("kv", "DE",       "VS Code (Dark+)"))
-    rows.append(("kv", "WM",       "tmux"))
     rows.append(("kv", "Terminal", "Alacritty / Windows Terminal"))
     rows.append(("kv", "CPU",      "Brain @ overclocked, severely sleep-deprived"))
     rows.append(("kv", "GPU",      "Imagination Engine (unlimited VRAM)"))
@@ -242,23 +241,16 @@ def build_lines(stats):
 
     # ── Frameworks & Tools ────────────────────────────────────────────────────
     rows.append(("section", "Frameworks & Tools"))
-    rows.append(("kv", "Frameworks.Frontend", "React, Next.js, Three.js"))
-    rows.append(("kv", "Frameworks.Backend",  "Node.js, Express, FastAPI, Spring"))
-    rows.append(("kv", "Frameworks.Mobile",   "Flutter, React Native"))
+    rows.append(("kv", "Frameworks.Web",    "React, Next.js, Three.js, Express, FastAPI"))
+    rows.append(("kv", "Frameworks.App",      "Flutter, React Native, Unity, Unreal Engine 5"))
     rows.append(("kv", "Frameworks.AI",       "TensorFlow, TFLite, Scikit-learn, MediaPipe"))
-    rows.append(("kv", "Frameworks.Game",     "Unity, Unreal Engine 5"))
     rows.append(("kv", "Databases",           "MongoDB, PostgreSQL, Redis, Firebase"))
-    rows.append(("kv", "DevOps",              "Git, Docker, Socket.io, Judge0"))
+    rows.append(("kv", "DevOps",              "Git, Docker, AWS, Socket.io, Judge0"))
     rows.append(("blank",))
 
     # ── Open Source ───────────────────────────────────────────────────────────
-    rows.append(("section", "Open Source"))
-    rows.append(("kv", "Hobbies.OSS", "microsoft/data-formulator #351 (MS Research)"))
-    rows.append(("kv", "Hobbies.OSS", "microsoft/apm #1367"))
-    rows.append(("blank",))
-
-    # ── Research ──────────────────────────────────────────────────────────────
-    rows.append(("section", "Research & Publications"))
+    rows.append(("section", "Open Source & Research"))
+    rows.append(("kv", "Hobbies.OSS",      "microsoft/data-formulator #351, microsoft/apm #1367"))
     rows.append(("kv", "Hobbies.Research", "CVR'26 Springer — Gesture-Based Assistive Tool"))
     rows.append(("kv", "Hobbies.IP",       "Sanketika ISL Dataset (Copyright LD-22598/2025)"))
     rows.append(("blank",))
@@ -267,9 +259,8 @@ def build_lines(stats):
     rows.append(("section", "Achievements"))
     rows.append(("kv", "Hobbies.CP",       "Codeforces Expert | CodeChef 4-Star | 500+ LC"))
     rows.append(("kv", "Hobbies.Software", "Winner — Most Addictive Game (8th Wall Jam)"))
-    rows.append(("kv", "Hobbies.Software", "1st Runner-Up — ISTE KJSCE Pixel Wars"))
+    rows.append(("kv", "Hobbies.Software", "1st Runner-Up ISTE Pixel Wars | 5x Finalist"))
     rows.append(("kv", "Hobbies.Software", "Featured by Markiplier & Jacksepticeye (20M+)"))
-    rows.append(("kv", "Hobbies.Hardware", "5x Hackathon Finalist (KJSSE, I<3Hackathon...)"))
     rows.append(("blank",))
 
     # ── Contact ───────────────────────────────────────────────────────────────
