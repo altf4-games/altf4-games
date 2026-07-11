@@ -338,12 +338,12 @@ def build_lines(stats):
     rows.append(("section", "Open Source & Research"))
     rows.append(("kv", "Hobbies.OSS",      "microsoft/data-formulator #351, microsoft/apm #1367"))
     rows.append(("kv", "Hobbies.Research", "CVR'26 Springer — Gesture-Based Assistive Tool"))
-    rows.append(("kv", "Hobbies.IP",       "Sanketika ISL Dataset (Copyright LD-22598/2025)"))
+    rows.append(("kv", "Hobbies.IP",       "Sanketika ISL Dataset"))
     rows.append(("blank",))
 
     # ── Achievements ──────────────────────────────────────────────────────────
     rows.append(("section", "Achievements"))
-    rows.append(("kv", "Hobbies.CP",       "Codeforces Expert | CodeChef 4-Star | 500+ LC"))
+    rows.append(("kv", "Hobbies.CP",       "CodeChef 4-Star | 500+ LC"))
     rows.append(("kv", "Hobbies.Software", "Winner — Most Addictive Game (8th Wall Jam)"))
     rows.append(("kv", "Hobbies.Software", "1st Runner-Up ISTE Pixel Wars | 5x Finalist"))
     rows.append(("kv", "Hobbies.Software", "Featured by Markiplier & Jacksepticeye (20M+)"))
