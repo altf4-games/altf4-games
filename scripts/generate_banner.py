@@ -2,7 +2,8 @@
 Generates a neofetch-style SVG banner (dark_mode.svg / light_mode.svg) for the
 GitHub profile README, in the ". label: ......... value" dot-leader layout
 with dashed section headers, plus live GitHub stats (repos, stars, followers,
-total commits, contributed-to repos, and total lines of code added/removed).
+total commits, contributed-to repos, total lines of code added/removed, PRs,
+and profile views — all rendered inside the SVG itself).
 
 Auth: uses the GITHUB_TOKEN Actions injects automatically into every
 workflow run. No personal access token needs to be created or stored.
@@ -115,6 +116,24 @@ def contributed_repo_count():
     return data["user"]["repositoriesContributedTo"]["totalCount"]
 
 
+def total_prs_merged():
+    """Count total merged pull requests authored by the user."""
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        pullRequests(states: MERGED) {
+          totalCount
+        }
+      }
+    }
+    """
+    data = graphql(query, {"login": USERNAME})
+    if not data:
+        return 0
+    return data["user"]["pullRequests"]["totalCount"]
+
+
+
 def lines_of_code(owned_repos):
     """Sums additions/deletions across owned, non-fork repos using the
     per-contributor stats endpoint. GitHub computes these lazily -- a fresh
@@ -154,6 +173,7 @@ def collect_stats():
         "stars": stars,
         "followers": user.get("followers", 0),
         "commits": total_commits_all_time(user.get("created_at", "2020-01-01T00:00:00Z")),
+        "prs": total_prs_merged(),
         "loc_additions": additions,
         "loc_deletions": deletions,
     }
@@ -163,7 +183,7 @@ def collect_stats():
 # Layout helpers (character-count based -- safe because the font is monospace)
 # ---------------------------------------------------------------------------
 
-def dotted(label, value, width=46):
+def dotted(label, value, width=70):
     prefix = f". {label}: "
     dots_needed = max(3, width - len(prefix) - len(value))
     return prefix, "." * dots_needed, " " + value
@@ -190,61 +210,88 @@ ASCII_LOGO = [
 def build_lines(stats):
     """Returns a list of 'rows'. Each row is either:
       ('header', text)                          -- top username line
-      ('section', text)                         -- "- Contact" divider
+      ('section', text)                         -- dashed section divider
       ('kv', label, value)                      -- dot-leader line
-      ('raw', text)                              -- pre-formatted line (stats block)
-      ('blank',)                                 -- spacer
+      ('raw_stats1/2', ...)                     -- compact multi-value stats line
+      ('raw_loc', ...)                          -- lines-of-code line
+      ('blank',)                                -- spacer
     """
     rows = [("header", f"{USERNAME}@github")]
 
-    rows.append(("kv", "OS", "Full-Stack, AI/ML, Game Development"))
-    rows.append(("kv", "Host", "Unreal Engine 5 / Unity"))
-    rows.append(("kv", "Kernel", "4-Star CodeChef"))
-    rows.append(("kv", "Uptime", "200k+ Game Downloads"))
-    rows.append(("kv", "Shell", "Competitive Programmer"))
+    # ── neofetch-style system block ───────────────────────────────────────────
+    rows.append(("kv", "OS",       "Arch (btw) / Linux / Windows 11"))
+    rows.append(("kv", "Host",     "KJSCE, Mumbai (local)"))
+    rows.append(("kv", "Kernel",   "B.Tech Computer Engineering — CGPA 9.63/10"))
+    rows.append(("kv", "Uptime",   "22 yrs, 10 yrs of coding"))
+    rows.append(("kv", "Packages", "npm · pip · pub · gradle"))
+    rows.append(("kv", "Shell",    "zsh / bash / powershell"))
+    rows.append(("kv", "DE",       "VS Code (Dark+)"))
+    rows.append(("kv", "WM",       "tmux"))
+    rows.append(("kv", "Terminal", "Alacritty / Windows Terminal"))
+    rows.append(("kv", "CPU",      "Brain @ overclocked, severely sleep-deprived"))
+    rows.append(("kv", "GPU",      "Imagination Engine (unlimited VRAM)"))
+    rows.append(("kv", "Memory",   "16GB RAM, mostly filled with LeetCode"))
     rows.append(("blank",))
 
-    rows.append(("kv", "Languages.Core", "C, C++, C#, Java, Python, Dart"))
-    rows.append(("kv", "Languages.Web", "JavaScript, HTML, CSS"))
-    rows.append(("kv", "Languages.Data", "SQL, JSON, YAML"))
+    # ── Languages ─────────────────────────────────────────────────────────────
+    rows.append(("section", "Languages"))
+    rows.append(("kv", "Languages.Programming", "C, C++, C#, Java, Python, Dart"))
+    rows.append(("kv", "Languages.Scripting",   "JavaScript, TypeScript"))
+    rows.append(("kv", "Languages.Web",         "HTML, CSS, SQL"))
     rows.append(("blank",))
 
-    rows.append(("kv", "Frameworks.Web", "React, Next.js, Node.js, FastAPI"))
-    rows.append(("kv", "Frameworks.Mobile", "Flutter, React Native"))
-    rows.append(("kv", "Frameworks.Game", "Unity, Unreal Engine"))
-    rows.append(("kv", "Frameworks.AI", "TensorFlow, Scikit-learn"))
-    rows.append(("kv", "Databases", "MongoDB, PostgreSQL, Firebase"))
+    # ── Frameworks & Tools ────────────────────────────────────────────────────
+    rows.append(("section", "Frameworks & Tools"))
+    rows.append(("kv", "Frameworks.Frontend", "React, Next.js, Three.js"))
+    rows.append(("kv", "Frameworks.Backend",  "Node.js, Express, FastAPI, Spring"))
+    rows.append(("kv", "Frameworks.Mobile",   "Flutter, React Native"))
+    rows.append(("kv", "Frameworks.AI",       "TensorFlow, TFLite, Scikit-learn, MediaPipe"))
+    rows.append(("kv", "Frameworks.Game",     "Unity, Unreal Engine 5"))
+    rows.append(("kv", "Databases",           "MongoDB, PostgreSQL, Redis, Firebase"))
+    rows.append(("kv", "DevOps",              "Git, Docker, Socket.io, Judge0"))
     rows.append(("blank",))
 
-    rows.append(("kv", "Achievements", "Winner, Most Addictive Game (8th Wall Jam)"))
-    rows.append(("kv", "Achievements", "1st Runner-Up, ISTE KJSSE Pixel Wars"))
-    rows.append(("kv", "Achievements", "Top 10, I<3 Hackathon Pune Web3 Edition"))
-    rows.append(("kv", "Achievements", "Finalist, IDEA Hackathon"))
-    rows.append(("kv", "Achievements", "Featured by Markiplier & Jacksepticeye (20M+)"))
-    rows.append(("blank",))
-
+    # ── Open Source ───────────────────────────────────────────────────────────
     rows.append(("section", "Open Source"))
-    rows.append(("kv", "PR Merged", "microsoft/data-formulator #351"))
-    rows.append(("kv", "PR Merged", "microsoft/apm #1367"))
+    rows.append(("kv", "Hobbies.OSS", "microsoft/data-formulator #351 (MS Research)"))
+    rows.append(("kv", "Hobbies.OSS", "microsoft/apm #1367"))
     rows.append(("blank",))
 
+    # ── Research ──────────────────────────────────────────────────────────────
+    rows.append(("section", "Research & Publications"))
+    rows.append(("kv", "Hobbies.Research", "CVR'26 Springer — Gesture-Based Assistive Tool"))
+    rows.append(("kv", "Hobbies.IP",       "Sanketika ISL Dataset (Copyright LD-22598/2025)"))
+    rows.append(("blank",))
+
+    # ── Achievements ──────────────────────────────────────────────────────────
+    rows.append(("section", "Achievements"))
+    rows.append(("kv", "Hobbies.CP",       "Codeforces Expert | CodeChef 4-Star | 500+ LC"))
+    rows.append(("kv", "Hobbies.Software", "Winner — Most Addictive Game (8th Wall Jam)"))
+    rows.append(("kv", "Hobbies.Software", "1st Runner-Up — ISTE KJSCE Pixel Wars"))
+    rows.append(("kv", "Hobbies.Software", "Featured by Markiplier & Jacksepticeye (20M+)"))
+    rows.append(("kv", "Hobbies.Hardware", "5x Hackathon Finalist (KJSSE, I<3Hackathon...)"))
+    rows.append(("blank",))
+
+    # ── Contact ───────────────────────────────────────────────────────────────
     rows.append(("section", "Contact"))
-    rows.append(("kv", "LinkedIn", "pradyum-mistry"))
-    rows.append(("kv", "Itch.io", "altf4-games"))
-    rows.append(("kv", "LeetCode", "pradyum_mistry"))
-    rows.append(("kv", "CodeChef", "pradyum_m"))
+    rows.append(("kv", "Contact.LinkedIn", "pradyum-mistry"))
+    rows.append(("kv", "Contact.Itch.io",  "altf4-games"))
+    rows.append(("kv", "Contact.LeetCode", "pradyum_mistry"))
+    rows.append(("kv", "Contact.CodeChef", "pradyum_m"))
     rows.append(("blank",))
 
+    # ── GitHub Stats ──────────────────────────────────────────────────────────
     rows.append(("section", "GitHub Stats"))
-    repos_txt = f"{stats['repos']}"
+    repos_txt   = f"{stats['repos']}"
     contrib_txt = f"{{Contributed: {stats['contributed']}}}"
-    stars_txt = f"{stats['stars']:,}"
+    stars_txt   = f"{stats['stars']:,}"
     commits_txt = f"{stats['commits']:,}"
     followers_txt = f"{stats['followers']:,}"
-    loc_total = stats["loc_additions"] + stats["loc_deletions"]
+    prs_txt     = f"{stats['prs']:,}"
+    loc_total   = stats["loc_additions"] + stats["loc_deletions"]
 
     rows.append(("raw_stats1", repos_txt, contrib_txt, stars_txt))
-    rows.append(("raw_stats2", commits_txt, followers_txt))
+    rows.append(("raw_stats2", commits_txt, followers_txt, prs_txt))
     rows.append(("raw_loc", f"{loc_total:,}", f"{stats['loc_additions']:,}++", f"{stats['loc_deletions']:,}--"))
 
     return rows
@@ -298,8 +345,8 @@ def render_svg(stats, theme_name):
     line_h = 21
     logo_line_h = 19
     right_x = pad_x + 470
-    right_width_chars = 58
-    width = 1180
+    right_width_chars = 70   # wider — fits longer values without truncation
+    width = 1280             # slightly wider canvas to accommodate extra chars
 
     right_h = pad_top + len(rows) * line_h + 30
     left_h = pad_top + len(ASCII_LOGO) * logo_line_h + 70
@@ -389,16 +436,20 @@ def render_svg(stats, theme_name):
             iy += line_h
             continue
         if kind == "raw_stats2":
-            commits_txt, followers_txt = row[1], row[2]
+            commits_txt, followers_txt, prs_txt = row[1], row[2], row[3]
             p.append(
                 f'<text x="{right_x}" y="{iy}" font-size="13">'
                 f'<tspan fill="{t["label"]}">. Commits: </tspan>'
-                f'<tspan fill="{t["dots"]}">{esc("." * 16)}</tspan>'
+                f'<tspan fill="{t["dots"]}">{esc("." * 10)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(commits_txt)}</tspan>'
                 f'<tspan fill="{t["dash"]}"> | </tspan>'
                 f'<tspan fill="{t["label"]}">Followers: </tspan>'
-                f'<tspan fill="{t["dots"]}">{esc("." * 7)}</tspan>'
+                f'<tspan fill="{t["dots"]}">{esc("." * 4)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(followers_txt)}</tspan>'
+                f'<tspan fill="{t["dash"]}"> | </tspan>'
+                f'<tspan fill="{t["label"]}">PRs: </tspan>'
+                f'<tspan fill="{t["dots"]}">{esc("." * 4)}</tspan>'
+                f'<tspan fill="{t["value"]}"> {esc(prs_txt)}</tspan>'
                 f"</text>"
             )
             iy += line_h
@@ -429,7 +480,8 @@ def main():
         # local/dry-run fallback so the script is runnable without a token
         stats = {
             "repos": 0, "contributed": 0, "stars": 0,
-            "followers": 0, "commits": 0, "loc_additions": 0, "loc_deletions": 0,
+            "followers": 0, "commits": 0, "prs": 0,
+            "loc_additions": 0, "loc_deletions": 0,
         }
     print("Stats:", stats)
 
@@ -437,7 +489,7 @@ def main():
     for theme_name in ("dark", "light"):
         svg = render_svg(stats, theme_name)
         path = f"assets/{theme_name}_mode.svg"
-        with open(path, "w") as f:
+        with open(path, "w", encoding="utf-8") as f:
             f.write(svg)
         print("Saved", path)
 
