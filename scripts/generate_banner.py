@@ -387,10 +387,16 @@ THEMES = {
         "dash": "#4b5262",
         "label": "#d7dae0",
         "dots": "#4b5262",
-        "value": "#e8eaee",
+        "value": "#9ca3af",       # Grayish shade for RHS values
         "logo": "#8fb8d9",
         "add": "#4fd671",
         "del": "#e5677a",
+        "accent_sys": "#56d4dd",       # Cyan/Teal for system hardware & shell
+        "accent_lang": "#c678dd",      # Purple/Magenta for languages
+        "accent_fw": "#e5c07b",        # Gold/Amber for frameworks & devops
+        "accent_oss": "#61afef",       # Bright Azure Blue for OSS & achievements
+        "accent_contact": "#e06c75",   # Coral/Rose for contact links
+        "accent_stats": "#98c379",     # Vibrant Green for live GitHub stats
     },
     "light": {
         "bg": "#f7f7f8",
@@ -400,16 +406,36 @@ THEMES = {
         "dash": "#a7abb3",
         "label": "#24262b",
         "dots": "#a7abb3",
-        "value": "#101216",
+        "value": "#4b5563",       # Grayish shade for RHS values
         "logo": "#2f6690",
         "add": "#1f9c3f",
         "del": "#c23b4d",
+        "accent_sys": "#0969da",       # Deep Royal Blue for system
+        "accent_lang": "#8250df",      # Deep Violet for languages
+        "accent_fw": "#9a6700",        # Warm Gold/Bronze for frameworks
+        "accent_oss": "#0550ae",       # Deep Azure for OSS & achievements
+        "accent_contact": "#cf222e",   # Crimson Rose for contact links
+        "accent_stats": "#1a7f37",     # Forest Green for live GitHub stats
     },
 }
 
 
 def esc(s):
     return html.escape(s, quote=True)
+
+
+def get_label_color(label, t):
+    if label.startswith("Languages"):
+        return t.get("accent_lang", t["label"])
+    if label.startswith("Frameworks") or label in ("Databases", "DevOps"):
+        return t.get("accent_fw", t["label"])
+    if label.startswith("Hobbies"):
+        return t.get("accent_oss", t["label"])
+    if label.startswith("Contact"):
+        return t.get("accent_contact", t["label"])
+    if label in ("OS", "Host", "Kernel", "Uptime", "Packages", "Shell", "DE", "Terminal", "CPU", "GPU", "Memory"):
+        return t.get("accent_sys", t["label"])
+    return t["label"]
 
 
 def render_svg(stats, theme_name):
@@ -505,9 +531,10 @@ def render_svg(stats, theme_name):
         if kind == "kv":
             label, value = row[1], row[2]
             prefix, dots, val = dotted(label, value, width=right_width_chars)
+            lbl_color = get_label_color(label, t)
             p.append(
                 f'<text x="{right_x}" y="{iy}" font-size="13">'
-                f'<tspan fill="{t["label"]}">{esc(prefix)}</tspan>'
+                f'<tspan fill="{lbl_color}">{esc(prefix)}</tspan>'
                 f'<tspan fill="{t["dots"]}">{esc(dots)}</tspan>'
                 f'<tspan fill="{t["value"]}">{esc(val)}</tspan>'
                 f"</text>"
@@ -516,13 +543,14 @@ def render_svg(stats, theme_name):
             continue
         if kind == "raw_stats1":
             repos_txt, contrib_txt, stars_txt = row[1], row[2], row[3]
+            sc = t.get("accent_stats", t["label"])
             p.append(
                 f'<text x="{right_x}" y="{iy}" font-size="13">'
-                f'<tspan fill="{t["label"]}">. Repos: </tspan>'
+                f'<tspan fill="{sc}">. Repos: </tspan>'
                 f'<tspan fill="{t["dots"]}">{esc("." * 4)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(repos_txt)} {esc(contrib_txt)}</tspan>'
                 f'<tspan fill="{t["dash"]}"> | </tspan>'
-                f'<tspan fill="{t["label"]}">Stars: </tspan>'
+                f'<tspan fill="{sc}">Stars: </tspan>'
                 f'<tspan fill="{t["dots"]}">{esc("." * 8)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(stars_txt)}</tspan>'
                 f"</text>"
@@ -531,17 +559,18 @@ def render_svg(stats, theme_name):
             continue
         if kind == "raw_stats2":
             commits_txt, followers_txt, prs_txt = row[1], row[2], row[3]
+            sc = t.get("accent_stats", t["label"])
             p.append(
                 f'<text x="{right_x}" y="{iy}" font-size="13">'
-                f'<tspan fill="{t["label"]}">. Commits: </tspan>'
+                f'<tspan fill="{sc}">. Commits: </tspan>'
                 f'<tspan fill="{t["dots"]}">{esc("." * 10)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(commits_txt)}</tspan>'
                 f'<tspan fill="{t["dash"]}"> | </tspan>'
-                f'<tspan fill="{t["label"]}">Followers: </tspan>'
+                f'<tspan fill="{sc}">Followers: </tspan>'
                 f'<tspan fill="{t["dots"]}">{esc("." * 4)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(followers_txt)}</tspan>'
                 f'<tspan fill="{t["dash"]}"> | </tspan>'
-                f'<tspan fill="{t["label"]}">PRs: </tspan>'
+                f'<tspan fill="{sc}">PRs: </tspan>'
                 f'<tspan fill="{t["dots"]}">{esc("." * 4)}</tspan>'
                 f'<tspan fill="{t["value"]}"> {esc(prs_txt)}</tspan>'
                 f"</text>"
@@ -550,9 +579,10 @@ def render_svg(stats, theme_name):
             continue
         if kind == "raw_loc":
             total_txt, add_txt, del_txt = row[1], row[2], row[3]
+            sc = t.get("accent_stats", t["label"])
             p.append(
                 f'<text x="{right_x}" y="{iy}" font-size="13">'
-                f'<tspan fill="{t["label"]}">. Lines of Code on GitHub: </tspan>'
+                f'<tspan fill="{sc}">. Lines of Code on GitHub: </tspan>'
                 f'<tspan fill="{t["value"]}">{esc(total_txt)} (</tspan>'
                 f'<tspan fill="{t["add"]}"> {esc(add_txt)}</tspan>'
                 f'<tspan fill="{t["value"]}">, </tspan>'
