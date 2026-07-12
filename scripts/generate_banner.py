@@ -306,7 +306,7 @@ def build_lines(stats):
 
     # ── neofetch-style system block ───────────────────────────────────────────
     rows.append(("kv", "OS",       "Arch (btw) / Linux / Windows 11"))
-    rows.append(("kv", "Host",     "KJSCE, Mumbai (local)"))
+    rows.append(("kv", "Host",     "KJSCE, Mumbai (local) | Barclays (remote)"))
     rows.append(("kv", "Kernel",   "B.Tech Computer Engineering — CGPA 9.63/10"))
     rows.append(("kv", "Uptime",   "22 yrs, 10 yrs of coding"))
     rows.append(("kv", "Packages", "npm · pip · pub · gradle"))
@@ -320,9 +320,8 @@ def build_lines(stats):
 
     # ── Languages ─────────────────────────────────────────────────────────────
     rows.append(("section", "Languages"))
-    rows.append(("kv", "Languages.Programming", "C, C++, C#, Java, Python, Dart"))
-    rows.append(("kv", "Languages.Scripting",   "JavaScript, TypeScript"))
-    rows.append(("kv", "Languages.Web",         "HTML, CSS, SQL"))
+    rows.append(("kv", "Languages.Programming", "C, C++, C#, Java, Python, Dart, SQL"))
+    rows.append(("kv", "Languages.Web",         "JavaScript, TypeScript, HTML, CSS"))
     rows.append(("blank",))
 
     # ── Frameworks & Tools ────────────────────────────────────────────────────
@@ -343,10 +342,10 @@ def build_lines(stats):
 
     # ── Achievements ──────────────────────────────────────────────────────────
     rows.append(("section", "Achievements"))
-    rows.append(("kv", "Hobbies.CP",       "CodeChef 4-Star | 500+ LC"))
-    rows.append(("kv", "Hobbies.Software", "Winner — Most Addictive Game (8th Wall Jam)"))
-    rows.append(("kv", "Hobbies.Software", "1st Runner-Up ISTE Pixel Wars | 5x Finalist"))
-    rows.append(("kv", "Hobbies.Software", "Featured by Markiplier & Jacksepticeye (20M+)"))
+    rows.append(("kv", "Hobbies.CP",        "CodeChef 4-Star | 500+ LC"))
+    rows.append(("kv", "Hobbies.Hackathon", "Winner — Most Addictive Game (8th Wall Jam)"))
+    rows.append(("kv", "Hobbies.Hackathon", "1st Runner-Up ISTE Pixel Wars | 5x Finalist"))
+    rows.append(("kv", "Hobbies.Software",  "Featured by Markiplier & Jacksepticeye (30M+)"))
     rows.append(("blank",))
 
     # ── Contact ───────────────────────────────────────────────────────────────
