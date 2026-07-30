@@ -2,13 +2,13 @@ name: Update neofetch README banner
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # daily at 03:00 UTC
-  workflow_dispatch: {}    # lets you trigger it manually from the Actions tab
+    - cron: "0 3 * * 1"   # every Monday at 03:00 UTC
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
   push:
     branches: [main]
 
 permissions:
-  contents: write          # lets the built-in token push the updated image
+  contents: write
 
 jobs:
   update-banner:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate banner SVGs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # auto-provided, no setup needed
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
         run: python scripts/generate_banner.py
 
