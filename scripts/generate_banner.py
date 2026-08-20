@@ -335,7 +335,8 @@ def build_lines(stats):
 
     # ── Open Source ───────────────────────────────────────────────────────────
     rows.append(("section", "Open Source & Research"))
-    rows.append(("kv", "Hobbies.OSS",      "microsoft/data-formulator #351, microsoft/apm #1367, ultralytics/ultralytics #25824"))
+    rows.append(("kv", "Hobbies.OSS",      "microsoft/data-formulator #351, microsoft/apm #1367"))
+    rows.append(("kv", "Hobbies.OSS", "ultralytics/ultralytics #25824"))
     rows.append(("kv", "Hobbies.Research", "CVR'26 Springer — Gesture-Based Assistive Tool"))
     rows.append(("kv", "Hobbies.IP",       "Sanketika ISL Dataset"))
     rows.append(("blank",))
