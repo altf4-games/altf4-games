@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1089" viewBox="0 0 1280 1089" font-family="'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',monospace">
-<rect x="0" y="0" width="1280" height="1089" rx="16" fill="#0b0e14"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1110" viewBox="0 0 1280 1110" font-family="'Cascadia Code','Fira Code',Consolas,'DejaVu Sans Mono',monospace">
+<rect x="0" y="0" width="1280" height="1110" rx="16" fill="#0b0e14"/>
 <rect x="0" y="0" width="1280" height="42" rx="16" fill="#171a21"/>
 <rect x="0" y="21" width="1280" height="21" fill="#171a21"/>
 <circle cx="22" cy="21" r="6" fill="#ff5f56"/>
@@ -76,16 +76,17 @@
 <text x="506" y="681" font-size="13"><tspan fill="#61afef">. Hobbies.IP: </tspan><tspan fill="#4b5262">...................................</tspan><tspan fill="#9ca3af"> Sanketika ISL Dataset</tspan></text>
 <text x="506" y="723" font-size="13"><tspan font-weight="bold" fill="#9ca3af">- Achievements</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
 <text x="506" y="744" font-size="13"><tspan fill="#61afef">. Hobbies.CP: </tspan><tspan fill="#4b5262">...............................</tspan><tspan fill="#9ca3af"> CodeChef 4-Star | 500+ LC</tspan></text>
-<text x="506" y="765" font-size="13"><tspan fill="#61afef">. Hobbies.Hackathon: </tspan><tspan fill="#4b5262">......</tspan><tspan fill="#9ca3af"> Winner — Most Addictive Game (8th Wall Jam)</tspan></text>
-<text x="506" y="786" font-size="13"><tspan fill="#61afef">. Hobbies.Hackathon: </tspan><tspan fill="#4b5262">......</tspan><tspan fill="#9ca3af"> 1st Runner-Up ISTE Pixel Wars | 5x Finalist</tspan></text>
-<text x="506" y="807" font-size="13"><tspan fill="#61afef">. Hobbies.Software: </tspan><tspan fill="#4b5262">.....</tspan><tspan fill="#9ca3af"> Featured by Markiplier &amp; Jacksepticeye (30M+)</tspan></text>
-<text x="506" y="849" font-size="13"><tspan font-weight="bold" fill="#9ca3af">- Contact</tspan><tspan fill="#4b5262"> ------------------------------------------------------------</tspan></text>
-<text x="506" y="870" font-size="13"><tspan fill="#e06c75">. Contact.LinkedIn: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#9ca3af"> pradyum-mistry</tspan></text>
-<text x="506" y="891" font-size="13"><tspan fill="#e06c75">. Contact.Itch.io: </tspan><tspan fill="#4b5262">........................................</tspan><tspan fill="#9ca3af"> altf4-games</tspan></text>
-<text x="506" y="912" font-size="13"><tspan fill="#e06c75">. Contact.LeetCode: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#9ca3af"> pradyum_mistry</tspan></text>
-<text x="506" y="933" font-size="13"><tspan fill="#e06c75">. Contact.CodeChef: </tspan><tspan fill="#4b5262">.........................................</tspan><tspan fill="#9ca3af"> pradyum_m</tspan></text>
-<text x="506" y="975" font-size="13"><tspan font-weight="bold" fill="#9ca3af">- GitHub Stats</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
-<text x="506" y="996" font-size="13"><tspan fill="#98c379">. Repos: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 83 {Contributed: 8}</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">Stars: </tspan><tspan fill="#4b5262">........</tspan><tspan fill="#9ca3af"> 21</tspan></text>
-<text x="506" y="1017" font-size="13"><tspan fill="#98c379">. Commits: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#9ca3af"> 2,133</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">Followers: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 18</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">PRs: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 6</tspan></text>
-<text x="506" y="1038" font-size="13"><tspan fill="#98c379">. Lines of Code on GitHub: </tspan><tspan fill="#9ca3af">17,192,804 (</tspan><tspan fill="#4fd671"> 15,545,078++</tspan><tspan fill="#9ca3af">, </tspan><tspan fill="#e5677a">1,647,726--</tspan><tspan fill="#9ca3af"> )</tspan></text>
+<text x="506" y="765" font-size="13"><tspan fill="#61afef">. Hobbies.Hackathon: </tspan><tspan fill="#4b5262">...</tspan><tspan fill="#9ca3af"> Winner — Hedera Track, ETHGlobal ETHOnline 2026</tspan></text>
+<text x="506" y="786" font-size="13"><tspan fill="#61afef">. Hobbies.Hackathon: </tspan><tspan fill="#4b5262">......</tspan><tspan fill="#9ca3af"> Winner — Most Addictive Game (8th Wall Jam)</tspan></text>
+<text x="506" y="807" font-size="13"><tspan fill="#61afef">. Hobbies.Hackathon: </tspan><tspan fill="#4b5262">......</tspan><tspan fill="#9ca3af"> 1st Runner-Up ISTE Pixel Wars | 5x Finalist</tspan></text>
+<text x="506" y="828" font-size="13"><tspan fill="#61afef">. Hobbies.Software: </tspan><tspan fill="#4b5262">.....</tspan><tspan fill="#9ca3af"> Featured by Markiplier &amp; Jacksepticeye (30M+)</tspan></text>
+<text x="506" y="870" font-size="13"><tspan font-weight="bold" fill="#9ca3af">- Contact</tspan><tspan fill="#4b5262"> ------------------------------------------------------------</tspan></text>
+<text x="506" y="891" font-size="13"><tspan fill="#e06c75">. Contact.LinkedIn: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#9ca3af"> pradyum-mistry</tspan></text>
+<text x="506" y="912" font-size="13"><tspan fill="#e06c75">. Contact.Itch.io: </tspan><tspan fill="#4b5262">........................................</tspan><tspan fill="#9ca3af"> altf4-games</tspan></text>
+<text x="506" y="933" font-size="13"><tspan fill="#e06c75">. Contact.LeetCode: </tspan><tspan fill="#4b5262">....................................</tspan><tspan fill="#9ca3af"> pradyum_mistry</tspan></text>
+<text x="506" y="954" font-size="13"><tspan fill="#e06c75">. Contact.CodeChef: </tspan><tspan fill="#4b5262">.........................................</tspan><tspan fill="#9ca3af"> pradyum_m</tspan></text>
+<text x="506" y="996" font-size="13"><tspan font-weight="bold" fill="#9ca3af">- GitHub Stats</tspan><tspan fill="#4b5262"> -------------------------------------------------------</tspan></text>
+<text x="506" y="1017" font-size="13"><tspan fill="#98c379">. Repos: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 83 {Contributed: 8}</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">Stars: </tspan><tspan fill="#4b5262">........</tspan><tspan fill="#9ca3af"> 21</tspan></text>
+<text x="506" y="1038" font-size="13"><tspan fill="#98c379">. Commits: </tspan><tspan fill="#4b5262">..........</tspan><tspan fill="#9ca3af"> 2,135</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">Followers: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 18</tspan><tspan fill="#4b5262"> | </tspan><tspan fill="#98c379">PRs: </tspan><tspan fill="#4b5262">....</tspan><tspan fill="#9ca3af"> 6</tspan></text>
+<text x="506" y="1059" font-size="13"><tspan fill="#98c379">. Lines of Code on GitHub: </tspan><tspan fill="#9ca3af">17,204,610 (</tspan><tspan fill="#4fd671"> 15,556,487++</tspan><tspan fill="#9ca3af">, </tspan><tspan fill="#e5677a">1,648,123--</tspan><tspan fill="#9ca3af"> )</tspan></text>
 </svg>
