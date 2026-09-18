@@ -345,6 +345,7 @@ def build_lines(stats):
     # ── Achievements ──────────────────────────────────────────────────────────
     rows.append(("section", "Achievements"))
     rows.append(("kv", "Hobbies.CP",        "CodeChef 4-Star | 500+ LC"))
+    rows.append(("kv", "Hobbies.Hackathon", "Winner — Hedera Track, ETHGlobal ETHOnline 2026"))
     rows.append(("kv", "Hobbies.Hackathon", "Winner — Most Addictive Game (8th Wall Jam)"))
     rows.append(("kv", "Hobbies.Hackathon", "1st Runner-Up ISTE Pixel Wars | 5x Finalist"))
     rows.append(("kv", "Hobbies.Software",  "Featured by Markiplier & Jacksepticeye (30M+)"))
