@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="76" viewBox="0 0 900 76"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}</style>
 <text x="24" y="54" font-size="40" fill="#1f2328">05</text>
-<text x="90" y="50" font-size="15" letter-spacing="3.5" fill="#9a6700">WINS</text>
-<rect x="149" y="45" width="635" height="1.5" fill="#afb8c1"/>
-<text x="798" y="50" font-size="13" fill="#59636e">~/trophies</text>
+<text x="90" y="50" font-size="15" letter-spacing="3.5" fill="#1a7f37">RESEARCH</text>
+<rect x="194" y="45" width="606" height="1.5" fill="#afb8c1"/>
+<text x="814" y="50" font-size="13" fill="#59636e">~/papers</text>
 </svg>

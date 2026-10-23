@@ -2,7 +2,7 @@
 Builds everything the profile README shows, from profile.yml + GitHub data:
 
   assets/{dark,light}/terminal.svg        animated neofetch card (ASCII logo)
-  assets/{dark,light}/s01..s05.svg        numbered section headers
+  assets/{dark,light}/s01..s06.svg        numbered section headers
   assets/{dark,light}/experience.svg      experience timeline
   assets/{dark,light}/pr-N.svg            one card per merged open-source PR
   assets/{dark,light}/research-N.svg      papers / IP
@@ -28,11 +28,12 @@ RAW = "./assets"
 ART = {"dark": "ascii-art.html", "light": "ascii-art_light.html"}   # Kiryu, as drawn
 
 SECTIONS = [
-    ("s01", "01", "now playing", "~/doom", "red"),
-    ("s02", "02", "experience", "~/work", "blue"),
-    ("s03", "03", "open source", "~/merged-prs", "purple"),
-    ("s04", "04", "research", "~/papers", "green"),
-    ("s05", "05", "wins", "~/trophies", "gold"),
+    ("s01", "01", "whoami", "~/neofetch", "green"),
+    ("s02", "02", "now playing", "~/doom", "red"),
+    ("s03", "03", "experience", "~/work", "blue"),
+    ("s04", "04", "open source", "~/merged-prs", "purple"),
+    ("s05", "05", "research", "~/papers", "green"),
+    ("s06", "06", "wins", "~/trophies", "gold"),
 ]
 
 
