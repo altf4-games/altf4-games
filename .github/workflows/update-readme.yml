@@ -1,17 +1,28 @@
-name: Update neofetch README banner
+name: Update README
 
 on:
   schedule:
-    - cron: "0 3 * * 1"   # every Monday at 03:00 UTC
-  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
+    - cron: "17 3 * * *"   # daily — picks up newly merged PRs
+  workflow_dispatch: {}    # manual run from the Actions tab
   push:
     branches: [main]
+    paths:
+      - profile.yml
+      - ascii-art*.html
+      - scripts/generate_banner.py
+      - scripts/update_readme.py
+      - scripts/profile_data.py
+      - .github/workflows/update-readme.yml
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-readme
+  cancel-in-progress: false
+
 jobs:
-  update-banner:
+  update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,21 +31,26 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests pyyaml
 
-      - name: Generate banner SVGs
+      - name: Generate neofetch banner
+        run: python scripts/generate_banner.py
+
+      - name: Update README blocks (PRs, achievements)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
-        run: python scripts/generate_banner.py
+        run: python scripts/update_readme.py
 
+      # Only commits when something actually changed, so quiet days add no
+      # history.
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/dark_mode.svg assets/light_mode.svg
-          git diff --staged --quiet || git commit -m "chore: update neofetch banner"
+          git add README.md assets/dark_mode.svg assets/light_mode.svg
+          git diff --staged --quiet || git commit -m "chore: update README"
           git push

@@ -1,0 +1,63 @@
+name: Generate Doom HUD
+
+on:
+  schedule:
+    - cron: "43 4 * * 1"   # weekly (Monday) — refreshes the stats in the HUD
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - profile.yml
+      - scripts/record_doom.sh
+      - scripts/build_doom_anim.py
+      - scripts/profile_data.py
+      - .github/workflows/doom.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: doom
+  cancel-in-progress: true
+
+jobs:
+  doom:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Doom, Freedoom and tooling
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq chocolate-doom freedoom xvfb ffmpeg fonts-dejavu-core
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml pillow
+
+      - name: Record demo
+        run: bash scripts/record_doom.sh doom_raw.mp4 demo1 18 5
+
+      - name: Build animation with live HUD
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: altf4-games
+        run: |
+          mkdir -p dist
+          python scripts/build_doom_anim.py doom_raw.mp4 dist/doom.webp
+          ls -la dist
+
+      # Published to its own branch and force-pushed each time, so the
+      # ~4 MB binary never piles up in main's history.
+      - name: Push to doom branch
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: doom
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

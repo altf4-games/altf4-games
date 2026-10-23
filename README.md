@@ -13,7 +13,7 @@
 
   <br><br>
 
-  <img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/doom.gif" alt="Doom playing itself, with a live altf4-games HUD" width="900">
+  <img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/doom.webp" alt="Doom playing itself, with a live altf4-games HUD" width="900">
 </div>
 
 ### 🔧 Recent open-source PRs
