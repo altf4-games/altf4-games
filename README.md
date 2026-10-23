@@ -39,20 +39,7 @@
 <a href="https://github.com/microsoft/data-formulator/pull/351"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-5.svg"><img src="./assets/light/pr-5.svg" alt="microsoft/data-formulator #351: fix: 2 agent bugs and improve test coverage"></picture></a>
 <!-- PRS:END -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s04.svg"><img src="./assets/light/s04.svg" alt="04 — projects"></picture>
-
-<!-- PROJECTS:START -->
-<div align="center">
-<a href="https://github.com/altf4-games?tab=repositories&q=praman"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-1.svg"><img src="./assets/light/project-1.svg" alt="PRAMAN: Payment gate that lets AI shopping agents pay merchants safely" width="49%"></picture></a>
-<a href="https://github.com/altf4-games?tab=repositories&q=namegate"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-2.svg"><img src="./assets/light/project-2.svg" alt="NameGate: Tokenized bonds on ENS subnames · ETHOnline Hedera track winner" width="49%"></picture></a>
-<a href="https://github.com/altf4-games?tab=repositories&q=tugboat"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-3.svg"><img src="./assets/light/project-3.svg" alt="Tugboat: Self-hosted Vercel-style deploys with blue-green swaps" width="49%"></picture></a>
-<a href="https://github.com/altf4-games?tab=repositories&q=wayfinder"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-4.svg"><img src="./assets/light/project-4.svg" alt="Wayfinder: Offline obstacle detection + sign language for blind &amp; deaf users" width="49%"></picture></a>
-<a href="https://github.com/altf4-games?tab=repositories&q=milan"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-5.svg"><img src="./assets/light/project-5.svg" alt="Milan: Indian Sign Language learning app on Google Play · 98% accuracy" width="49%"></picture></a>
-<a href="https://github.com/altf4-games?tab=repositories&q=skillversus"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/project-6.svg"><img src="./assets/light/project-6.svg" alt="SkillVersus: Real-time 1v1 DSA duels, contests and typing battles" width="49%"></picture></a>
-</div>
-<!-- PROJECTS:END -->
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s05.svg"><img src="./assets/light/s05.svg" alt="05 — research"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s04.svg"><img src="./assets/light/s04.svg" alt="04 — research"></picture>
 
 <!-- RESEARCH:START -->
 <a href="https://doi.org/10.1007/978-3-032-39794-2_32"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/research-1.svg"><img src="./assets/light/research-1.svg" alt="Paper: Gesture-Based Assistive Tool for Children with Speech and Hearing Impairments"></picture></a>
@@ -60,7 +47,7 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/research-3.svg"><img src="./assets/light/research-3.svg" alt="Copyright: Sanketika — Indian Sign Language dataset"></picture>
 <!-- RESEARCH:END -->
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s06.svg"><img src="./assets/light/s06.svg" alt="06 — wins"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s05.svg"><img src="./assets/light/s05.svg" alt="05 — wins"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/wins.svg"><img src="./assets/light/wins.svg" alt="Wins and recognition"></picture>
 

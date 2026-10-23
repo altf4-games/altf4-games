@@ -1,7 +1,7 @@
 """
 Shared SVG building blocks for the profile README: GitHub-matching dark /
 light palettes and the individual cards (terminal, section headers, PR rows,
-experience, research, projects, wins, footer). Every function returns an SVG string for one theme.
+experience, research, wins, footer). Every function returns an SVG string for one theme.
 
 Monospace layout maths assume ~0.6em per character, which holds for the
 JetBrains Mono / Fira Code / DejaVu Sans Mono fallback chain below.
@@ -248,30 +248,6 @@ def research_card(theme, item):
         p.append(f'<text x="{W - 20}" y="31" font-size="12" fill="{t["blue"]}" text-anchor="end">read ↗</text>')
     for i, line in enumerate(lines):
         p.append(f'<text x="20" y="{62 + i * 21}" font-size="15" font-weight="bold" fill="{t["text"]}">{esc(line)}</text>')
-    p.append("</svg>")
-    return "\n".join(p)
-
-
-# ---------------------------------------------------------------------------
-# Project card (half width, two per row)
-# ---------------------------------------------------------------------------
-
-PW = 440
-
-
-def project_card(theme, proj, accent):
-    t = THEMES[theme]
-    h = 124
-    c = t[accent]
-    lines = wrap(proj["blurb"], 44)[:2]
-    p = [svg_open(PW, h)]
-    p.append(f'<rect x=".5" y=".5" width="{PW - 1}" height="{h - 9}" rx="10" fill="{t["bg"]}" stroke="{t["stroke"]}"/>')
-    p.append(f'<rect x=".5" y=".5" width="{PW - 1}" height="4" rx="2" fill="{c}"/>')
-    p.append(f'<text x="18" y="34" font-size="16" font-weight="bold" fill="{t["text"]}">{esc(proj["name"])}</text>')
-    p.append(f'<text x="{PW - 18}" y="34" font-size="13" fill="{t["muted"]}" text-anchor="end">↗</text>')
-    for i, line in enumerate(lines):
-        p.append(f'<text x="18" y="{57 + i * 18}" font-size="12.5" fill="{t["muted"]}">{esc(line)}</text>')
-    p.append(f'<text x="18" y="{h - 22}" font-size="11.5" fill="{c}">{esc(clip(proj["tech"], 52))}</text>')
     p.append("</svg>")
     return "\n".join(p)
 

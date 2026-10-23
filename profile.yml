@@ -47,33 +47,6 @@ research:
     title: Sanketika — Indian Sign Language dataset
     venue: Diary No. LD-22598/2025-CO · plus an Indian road-traffic detection dataset
 
-# Featured projects (2 per row). url: swap in the exact repo / live link.
-projects:
-  - name: PRAMAN
-    blurb: Payment gate that lets AI shopping agents pay merchants safely
-    tech: Python · FastAPI · Gemini · MCP
-    url: https://github.com/altf4-games?tab=repositories&q=praman
-  - name: NameGate
-    blurb: Tokenized bonds on ENS subnames · ETHOnline Hedera track winner
-    tech: Solidity · ENSv2 · Chainlink CCIP
-    url: https://github.com/altf4-games?tab=repositories&q=namegate
-  - name: Tugboat
-    blurb: Self-hosted Vercel-style deploys with blue-green swaps
-    tech: Node.js · Docker · Traefik
-    url: https://github.com/altf4-games?tab=repositories&q=tugboat
-  - name: Wayfinder
-    blurb: Offline obstacle detection + sign language for blind & deaf users
-    tech: Flutter · YOLO · MiDaS · TFLite
-    url: https://github.com/altf4-games?tab=repositories&q=wayfinder
-  - name: Milan
-    blurb: Indian Sign Language learning app on Google Play · 98% accuracy
-    tech: Flutter · MediaPipe · TFLite
-    url: https://github.com/altf4-games?tab=repositories&q=milan
-  - name: SkillVersus
-    blurb: Real-time 1v1 DSA duels, contests and typing battles
-    tech: React · Socket.io · Redis · Judge0
-    url: https://github.com/altf4-games?tab=repositories&q=skillversus
-
 # Wins card + Doom HUD. Keep it to the best 3-4.
 achievements:
   - badge: Winner

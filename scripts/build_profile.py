@@ -2,14 +2,13 @@
 Builds everything the profile README shows, from profile.yml + GitHub data:
 
   assets/{dark,light}/terminal.svg        animated neofetch card (ASCII logo)
-  assets/{dark,light}/s01..s06.svg        numbered section headers
+  assets/{dark,light}/s01..s05.svg        numbered section headers
   assets/{dark,light}/experience.svg      experience timeline
   assets/{dark,light}/pr-N.svg            one card per merged open-source PR
-  assets/{dark,light}/project-N.svg       featured project cards
   assets/{dark,light}/research-N.svg      papers / IP
   assets/{dark,light}/wins.svg            achievements card
   assets/{dark,light}/footer.svg
-  README.md  PRS / PROJECTS / RESEARCH blocks (cards that need their own link)
+  README.md  PRS / RESEARCH blocks (cards that need their own link)
 
 Output is deterministic, so the workflow only commits when data changed.
 """
@@ -32,11 +31,9 @@ SECTIONS = [
     ("s01", "01", "now playing", "~/doom", "red"),
     ("s02", "02", "experience", "~/work", "blue"),
     ("s03", "03", "open source", "~/merged-prs", "purple"),
-    ("s04", "04", "projects", "~/builds", "green"),
-    ("s05", "05", "research", "~/papers", "green"),
-    ("s06", "06", "wins", "~/trophies", "gold"),
+    ("s04", "04", "research", "~/papers", "green"),
+    ("s05", "05", "wins", "~/trophies", "gold"),
 ]
-PROJECT_ACCENTS = ["blue", "purple", "green", "gold", "red", "blue"]
 
 
 class _AsciiParser(HTMLParser):
@@ -102,14 +99,13 @@ def main():
     term = profile["terminal"]
     oss = oss_data(profile)
     prs = oss["prs"]
-    projects = profile.get("projects", [])
     research = profile.get("research", [])
 
     rows = [(label, str(value).replace("{oss_prs}", str(oss["total"])))
             for label, value in term["rows"]]
 
     # drop numbered cards left over from a longer list
-    for pattern in ("pr-*.svg", "project-*.svg", "research-*.svg"):
+    for pattern in ("pr-*.svg", "research-*.svg"):
         for old in glob.glob(os.path.join(ASSETS, "*", pattern)):
             os.remove(old)
 
@@ -121,9 +117,6 @@ def main():
         for i, p in enumerate(prs):
             merged = datetime.date.fromisoformat(p["merged_at"][:10]).strftime("%b %Y")
             write(theme, f"pr-{i + 1}.svg", kit.pr_card(theme, p, merged))
-        for i, proj in enumerate(projects):
-            accent = PROJECT_ACCENTS[i % len(PROJECT_ACCENTS)]
-            write(theme, f"project-{i + 1}.svg", kit.project_card(theme, proj, accent))
         for i, item in enumerate(research):
             write(theme, f"research-{i + 1}.svg", kit.research_card(theme, item))
         write(theme, "wins.svg", kit.wins(theme, profile.get("achievements", [])))
@@ -132,9 +125,6 @@ def main():
     pr_html = "\n".join(
         linked(p["url"], picture(f"pr-{i + 1}.svg", f"{p['repo']} #{p['number']}: {p['title']}"))
         for i, p in enumerate(prs)) or "<sub>No merged PRs yet. Soon.</sub>"
-    proj_html = "\n".join(
-        linked(proj.get("url"), picture(f"project-{i + 1}.svg", f"{proj['name']}: {proj['blurb']}", "49%"))
-        for i, proj in enumerate(projects))
     research_html = "\n".join(
         linked(item.get("url"), picture(f"research-{i + 1}.svg", f"{item['kind']}: {item['title']}"))
         for i, item in enumerate(research))
@@ -142,12 +132,11 @@ def main():
     with open(README, encoding="utf-8") as f:
         text = f.read()
     text = replace_block(text, "PRS", pr_html)
-    text = replace_block(text, "PROJECTS", f'<div align="center">\n{proj_html}\n</div>')
     text = replace_block(text, "RESEARCH", research_html)
     with open(README, "w", encoding="utf-8") as f:
         f.write(text)
     print(f"Built profile: {len(prs)} PR cards ({oss['total']} merged OSS PRs), "
-          f"{len(projects)} projects, {len(research)} research items")
+          f"{len(research)} research items")
 
 
 if __name__ == "__main__":
