@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="124" viewBox="0 0 440 124"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}</style>
+<rect x=".5" y=".5" width="439" height="115" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x=".5" y=".5" width="439" height="4" rx="2" fill="#38bdf8"/>
+<text x="18" y="34" font-size="16" font-weight="bold" fill="#e6edf3">PRAMAN</text>
+<text x="422" y="34" font-size="13" fill="#8b949e" text-anchor="end">↗</text>
+<text x="18" y="57" font-size="12.5" fill="#8b949e">Payment gate that lets AI shopping agents</text>
+<text x="18" y="75" font-size="12.5" fill="#8b949e">pay merchants safely</text>
+<text x="18" y="102" font-size="11.5" fill="#38bdf8">Python · FastAPI · Gemini · MCP</text>
+</svg>

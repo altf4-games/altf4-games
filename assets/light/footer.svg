@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="56" viewBox="0 0 900 56"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s step-end infinite}</style>
 <rect x="0" y="8" width="900" height="1.5" fill="#afb8c1"/>
-<text x="450.0" y="40" font-size="14" text-anchor="middle"><tspan fill="#1a7f37">pradyum@altf4</tspan><tspan fill="#1f2328">:~$ exit </tspan><tspan fill="#59636e"># or just press </tspan><tspan fill="#cf222e" font-weight="bold">Alt+F4</tspan></text>
+<text x="450.0" y="40" font-size="14" text-anchor="middle"><tspan fill="#1a7f37">altf4-games@github</tspan><tspan fill="#1f2328">:~$ exit </tspan><tspan fill="#59636e"># or just press </tspan><tspan fill="#cf222e" font-weight="bold">Alt+F4</tspan></text>
 </svg>

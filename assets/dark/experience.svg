@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="268" viewBox="0 0 900 268"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}</style>
+<rect x="31" y="22" width="2" height="218" fill="#30363d"/>
+<circle cx="32" cy="26" r="7" fill="#0d1117" stroke="#38bdf8" stroke-width="3"/>
+<text x="58" y="31" font-size="16"><tspan fill="#e6edf3" font-weight="bold">Software Engineering Intern</tspan><tspan fill="#8b949e"> @ </tspan><tspan fill="#38bdf8">Barclays (Investment Banking)</tspan></text>
+<text x="880" y="31" font-size="12" fill="#8b949e" text-anchor="end">Jun 2026 – Aug 2026</text>
+<text x="58" y="56" font-size="13" fill="#8b949e">React/FastAPI tooling over a 1.17M-row table · graph-based task engine · Kafka</text>
+<circle cx="32" cy="110" r="7" fill="#0d1117" stroke="#484f58" stroke-width="3"/>
+<text x="58" y="115" font-size="16"><tspan fill="#e6edf3" font-weight="bold">Founder &amp; Sole Developer</tspan><tspan fill="#8b949e"> @ </tspan><tspan fill="#38bdf8">ALTF4 Games</tspan></text>
+<text x="880" y="115" font-size="12" fill="#8b949e" text-anchor="end">2016 – present</text>
+<text x="58" y="140" font-size="13" fill="#8b949e">22 titles, 100k+ downloads · Captive ported to Nintendo via Upscale Studio</text>
+<circle cx="32" cy="194" r="7" fill="#0d1117" stroke="#484f58" stroke-width="3"/>
+<text x="58" y="199" font-size="16"><tspan fill="#e6edf3" font-weight="bold">Game Development &amp; XR Intern</tspan><tspan fill="#8b949e"> @ </tspan><tspan fill="#38bdf8">VyuXR Immersive Studios</tspan></text>
+<text x="880" y="199" font-size="12" fill="#8b949e" text-anchor="end">May 2025 – Jun 2025</text>
+<text x="58" y="224" font-size="13" fill="#8b949e">Unity mixed-reality features · 30% drop in crash rates</text>
+</svg>

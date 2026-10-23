@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="100" viewBox="0 0 900 100"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}</style>
+<rect x=".5" y=".5" width="899" height="91" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="20" y="16" width="96" height="22" rx="11" fill="#0969da" fill-opacity="0.15"/>
+<text x="68" y="31" font-size="11" letter-spacing="1.2" font-weight="bold" fill="#0969da" text-anchor="middle">MANUSCRIPT</text>
+<text x="128" y="31" font-size="12" fill="#59636e">Journal manuscript in preparation</text>
+<text x="20" y="62" font-size="15" font-weight="bold" fill="#1f2328">On-Device Assistive Perception for Blind Pedestrian Navigation and Sign-Language</text>
+<text x="20" y="83" font-size="15" font-weight="bold" fill="#1f2328">Communication</text>
+</svg>

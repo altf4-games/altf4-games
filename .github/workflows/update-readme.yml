@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - profile.yml
+      - ascii-art.html
       - README.md
       - scripts/build_profile.py
       - scripts/svg_kit.py

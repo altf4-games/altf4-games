@@ -1,39 +1,90 @@
 # ---------------------------------------------------------------------------
 # Single place to edit the profile README.
 # Edit this file (even from the GitHub web editor) and the workflows rebuild
-# the terminal card, the wins card, the README and the Doom HUD.
+# the cards in assets/, the README and the Doom HUD.
 #
 # Open-source PRs are NOT listed here: they are fetched from GitHub
 # automatically (merged PRs you authored in repos you don't own).
 # ---------------------------------------------------------------------------
 
 terminal:
-  user: pradyum
-  host: altf4
-  tagline: "games. web. ai."
-  location: "Mumbai, IN · UTC+5:30"
-  # Keep it short — the stack is shown as icons below the card.
+  user: altf4-games
+  host: github
+  # Logo = the colored ASCII portrait in ascii-art.html
   # {oss_prs} is replaced with your live count of merged open-source PRs.
   rows:
-    - [OS,       "B.Tech Computer Engineering @ KJSCE"]
-    - [Host,     "Barclays (remote)"]
-    - [Uptime,   "10 yrs of coding · CGPA 9.63"]
+    - [OS,       "B.Tech Computer Engineering @ KJSCE '27"]
+    - [Host,     "SWE Intern @ Barclays (Investment Banking)"]
     - [Kernel,   "Game Dev · Full Stack · AI/ML"]
-    - [Packages, "{oss_prs} open-source PRs merged"]
+    - [Uptime,   "10 yrs of coding · CGPA 9.63/10"]
+    - [Packages, "22 games shipped · 100k+ downloads"]
+    - [PRs,      "{oss_prs} merged into open source"]
     - [CPU,      "Brain @ overclocked, sleep-deprived"]
-    - [Loading,  "next game jam ▰▰▰▱▱"]
 
-# Shown as the wins card and in the Doom HUD. Keep it to the best 3-4.
+experience:
+  - role: Software Engineering Intern
+    org: Barclays (Investment Banking)
+    when: Jun 2026 – Aug 2026
+    what: React/FastAPI tooling over a 1.17M-row table · graph-based task engine · Kafka
+  - role: Founder & Sole Developer
+    org: ALTF4 Games
+    when: 2016 – present
+    what: 22 titles, 100k+ downloads · Captive ported to Nintendo via Upscale Studio
+  - role: Game Development & XR Intern
+    org: VyuXR Immersive Studios
+    when: May 2025 – Jun 2025
+    what: Unity mixed-reality features · 30% drop in crash rates
+
+research:
+  - kind: Paper
+    title: Gesture-Based Assistive Tool for Children with Speech and Hearing Impairments
+    venue: CVR 2026 · Springer LNNS 2250
+    url: https://doi.org/10.1007/978-3-032-39794-2_32
+  - kind: Manuscript
+    title: On-Device Assistive Perception for Blind Pedestrian Navigation and Sign-Language Communication
+    venue: Journal manuscript in preparation
+  - kind: Copyright
+    title: Sanketika — Indian Sign Language dataset
+    venue: Diary No. LD-22598/2025-CO · plus an Indian road-traffic detection dataset
+
+# Featured projects (2 per row). url: swap in the exact repo / live link.
+projects:
+  - name: PRAMAN
+    blurb: Payment gate that lets AI shopping agents pay merchants safely
+    tech: Python · FastAPI · Gemini · MCP
+    url: https://github.com/altf4-games?tab=repositories&q=praman
+  - name: NameGate
+    blurb: Tokenized bonds on ENS subnames · ETHOnline Hedera track winner
+    tech: Solidity · ENSv2 · Chainlink CCIP
+    url: https://github.com/altf4-games?tab=repositories&q=namegate
+  - name: Tugboat
+    blurb: Self-hosted Vercel-style deploys with blue-green swaps
+    tech: Node.js · Docker · Traefik
+    url: https://github.com/altf4-games?tab=repositories&q=tugboat
+  - name: Wayfinder
+    blurb: Offline obstacle detection + sign language for blind & deaf users
+    tech: Flutter · YOLO · MiDaS · TFLite
+    url: https://github.com/altf4-games?tab=repositories&q=wayfinder
+  - name: Milan
+    blurb: Indian Sign Language learning app on Google Play · 98% accuracy
+    tech: Flutter · MediaPipe · TFLite
+    url: https://github.com/altf4-games?tab=repositories&q=milan
+  - name: SkillVersus
+    blurb: Real-time 1v1 DSA duels, contests and typing battles
+    tech: React · Socket.io · Redis · Judge0
+    url: https://github.com/altf4-games?tab=repositories&q=skillversus
+
+# Wins card + Doom HUD. Keep it to the best 3-4.
 achievements:
   - badge: Winner
     title: Hedera Track
     event: ETHGlobal ETHOnline 2026
   - badge: Winner
     title: Most Addictive Game
-    event: 8th Wall Game Jam
+    event: 8th Wall Forge the Future Game Jam
   - badge: 1st Runner-Up
     title: ISTE Pixel Wars
-    event: + 5x hackathon finalist
+    event: + finalist at ACM Aftermath, KJSSE HACK 8, iDEA
 
 # Auto-fetched open-source PR list.
 prs:

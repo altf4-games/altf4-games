@@ -1,7 +1,7 @@
 """
 Shared SVG building blocks for the profile README: GitHub-matching dark /
 light palettes and the individual cards (terminal, section headers, PR rows,
-wins, footer). Every function returns an SVG string for one theme.
+experience, research, projects, wins, footer). Every function returns an SVG string for one theme.
 
 Monospace layout maths assume ~0.6em per character, which holds for the
 JetBrains Mono / Fira Code / DejaVu Sans Mono fallback chain below.
@@ -30,16 +30,6 @@ THEMES = {
                    "#0969da", "#8250df", "#1b7c83", "#59636e"],
     },
 }
-
-# 5x7 pixel glyphs for the terminal logo
-GLYPHS = {
-    "A": [".###.", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
-    "L": ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
-    "T": ["#####", "..#..", "..#..", "..#..", "..#..", "..#..", "..#.."],
-    "F": ["#####", "#....", "#....", "####.", "#....", "#....", "#...."],
-    "4": ["...#.", "..##.", ".#.#.", "#..#.", "#####", "...#.", "...#."],
-}
-
 
 def esc(s):
     return html.escape(str(s), quote=True)
@@ -73,10 +63,30 @@ def fade_in(begin, dur=0.3):
 # Terminal (neofetch) card
 # ---------------------------------------------------------------------------
 
-def terminal(theme, user, host, rows, tagline, location, command="neofetch"):
+def wrap(text, width):
+    """Greedy word wrap to lines of at most `width` characters."""
+    lines, cur = [], ""
+    for word in text.split():
+        if cur and len(cur) + 1 + len(word) > width:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = f"{cur} {word}" if cur else word
+    return lines + ([cur] if cur else [])
+
+
+def terminal(theme, user, host, rows, art_rows, command="neofetch"):
+    """art_rows: [[(char, '#rrggbb'), ...], ...] — the colored ASCII logo."""
     t = THEMES[theme]
-    h = 405
     prompt = f"{user}@{host}"
+    art_w = 330
+    cols = max((len(r) for r in art_rows), default=1)
+    art_fs = art_w / (cols * 0.6)
+    art_lh = art_fs * 1.12
+    art_top = 88
+    art_bottom = art_top + len(art_rows) * art_lh
+    h = int(art_bottom + 64)
+
     p = [svg_open(W, h, "@keyframes blink{50%{opacity:0}}.cur{animation:blink 1s step-end infinite}")]
     p.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{h - 1}" rx="12" fill="{t["bg"]}" stroke="{t["stroke"]}"/>')
     p.append(f'<path d="M1 12a11 11 0 0 1 11-11h{W - 24}a11 11 0 0 1 11 11v22H1z" fill="{t["chrome"]}"/>')
@@ -93,54 +103,47 @@ def terminal(theme, user, host, rows, tagline, location, command="neofetch"):
         f'<tspan fill="transparent">{esc(ch)}<set attributeName="fill" to="{t["text"]}" '
         f'begin="{0.4 + i * 0.07:.2f}s" fill="freeze"/></tspan>'
         for i, ch in enumerate(command))
-    p.append(f'<text x="24" y="66" font-size="15">{prompt_tspans()}{typed}</text>')
+    p.append(f'<text x="24" y="62" font-size="15">{prompt_tspans()}{typed}</text>')
     start = 0.6 + len(command) * 0.07
 
-    # pixel logo: ALT over F4
-    px, gap = 10, 2
-    step = px + gap
-    letter_w = 5 * step
-    blocks = []
-    for word, colour, y0 in (("ALT", t["blue"], 92), ("F4", t["red"], 92 + 8 * step)):
-        word_w = len(word) * (letter_w + step) - step
-        x0 = 44 + ((3 * (letter_w + step) - step) - word_w) / 2
-        for li, ch in enumerate(word):
-            for ry, line in enumerate(GLYPHS[ch]):
-                for rx, bit in enumerate(line):
-                    if bit == "#":
-                        blocks.append((x0 + li * (letter_w + step) + rx * step, y0 + ry * step, colour))
-    for i, (x, y, c) in enumerate(blocks):
-        p.append(f'<rect x="{x:.0f}" y="{y}" width="{px}" height="{px}" rx="2" fill="{c}" opacity="0">'
-                 f'{fade_in(start + i * 0.012, 0.2)}</rect>')
-    logo_end = start + len(blocks) * 0.012
+    # ASCII logo, revealed top to bottom like a slow terminal
+    for i, row in enumerate(art_rows):
+        groups, j = [], 0
+        while j < len(row):
+            k = j
+            while k < len(row) and row[k][1] == row[j][1]:
+                k += 1
+            groups.append((row[j][1], "".join(ch for ch, _ in row[j:k])))
+            j = k
+        spans = "".join(f'<tspan fill="{c}">{esc(txt)}</tspan>' for c, txt in groups)
+        y = art_top + i * art_lh + art_fs
+        p.append(f'<text x="28" y="{y:.1f}" font-size="{art_fs:.2f}" opacity="0">{spans}'
+                 f'{fade_in(start + i * 0.025, 0.15)}</text>')
+    logo_end = start + len(art_rows) * 0.025
 
-    ty = 92 + 15 * step + 34
-    p.append(f'<text x="44" y="{ty}" font-size="15" opacity="0"><tspan fill="{t["purple"]}">&lt;/&gt; </tspan>'
-             f'<tspan fill="{t["purple"]}">{esc(tagline)}</tspan>{fade_in(logo_end)}</text>')
-    p.append(f'<text x="44" y="{ty + 30}" font-size="13" fill="{t["muted"]}" opacity="0">'
-             f'// {esc(location)}{fade_in(logo_end + 0.1)}</text>')
-
-    # info column
-    rx_ = 340
-    p.append(f'<text x="{rx_}" y="102" font-size="16" font-weight="bold" fill="{t["gold"]}" opacity="0">'
+    # info column, vertically centred on the logo
+    rx_ = 390
+    block_h = 40 + len(rows) * 25 + 24
+    y0 = art_top + max(0, (art_bottom - art_top - block_h) / 2) + 14
+    p.append(f'<text x="{rx_}" y="{y0:.0f}" font-size="16" font-weight="bold" fill="{t["gold"]}" opacity="0">'
              f'{esc(prompt)}{fade_in(start)}</text>')
-    p.append(f'<rect x="{rx_}" y="114" width="{chars(prompt, 16):.0f}" height="1.5" fill="{t["faint"]}" opacity="0">'
+    p.append(f'<rect x="{rx_}" y="{y0 + 12:.0f}" width="{chars(prompt, 16):.0f}" height="1.5" fill="{t["faint"]}" opacity="0">'
              f'{fade_in(start)}</rect>')
-    y = 144
+    y = y0 + 42
     for i, (label, value) in enumerate(rows):
-        p.append(f'<text x="{rx_}" y="{y}" font-size="15" opacity="0">'
+        p.append(f'<text x="{rx_}" y="{y:.0f}" font-size="14.5" opacity="0">'
                  f'<tspan fill="{t["blue"]}" font-weight="bold">{esc(label)}</tspan>'
                  f'<tspan fill="{t["text"]}">: {esc(value)}</tspan>{fade_in(start + 0.2 + i * 0.12)}</text>')
         y += 25
-    rows_end = start + 0.2 + len(rows) * 0.12
+    rows_end = max(start + 0.2 + len(rows) * 0.12, logo_end)
     for i, c in enumerate(t["blocks"]):
-        p.append(f'<rect x="{rx_ + i * 32}" y="{y - 4}" width="28" height="14" rx="2" fill="{c}" opacity="0">'
+        p.append(f'<rect x="{rx_ + i * 32}" y="{y - 4:.0f}" width="28" height="14" rx="2" fill="{c}" opacity="0">'
                  f'{fade_in(rows_end + i * 0.05)}</rect>')
 
-    p.append(f'<text x="24" y="{h - 26}" font-size="15" opacity="0">{prompt_tspans()}{fade_in(rows_end + 0.5)}</text>')
+    p.append(f'<text x="24" y="{h - 22}" font-size="15" opacity="0">{prompt_tspans()}{fade_in(rows_end + 0.4)}</text>')
     cx = 24 + chars(prompt + ":~$ ", 15)
-    p.append(f'<g opacity="0">{fade_in(rows_end + 0.5, 0.01)}'
-             f'<rect class="cur" x="{cx:.0f}" y="{h - 40}" width="9" height="18" fill="{t["blue"]}"/></g>')
+    p.append(f'<g opacity="0">{fade_in(rows_end + 0.4, 0.01)}'
+             f'<rect class="cur" x="{cx:.0f}" y="{h - 36}" width="9" height="18" fill="{t["blue"]}"/></g>')
     p.append("</svg>")
     return "\n".join(p)
 
@@ -199,6 +202,78 @@ def pr_card(theme, pr, merged_label):
         f'<text x="{W - 20}" y="54" font-size="12" fill="{t["muted"]}" text-anchor="end">merged {esc(merged_label)}</text>',
         "</svg>",
     ])
+
+
+# ---------------------------------------------------------------------------
+# Experience timeline
+# ---------------------------------------------------------------------------
+
+def experience(theme, items):
+    t = THEMES[theme]
+    row_h = 84
+    h = 16 + len(items) * row_h
+    p = [svg_open(W, h)]
+    p.append(f'<rect x="31" y="22" width="2" height="{h - 50}" fill="{t["stroke"]}"/>')
+    for i, e in enumerate(items):
+        y = 12 + i * row_h
+        colour = t["blue"] if i == 0 else t["faint"]
+        p.append(f'<circle cx="32" cy="{y + 14}" r="7" fill="{t["bg"]}" stroke="{colour}" stroke-width="3"/>')
+        p.append(f'<text x="58" y="{y + 19}" font-size="16"><tspan fill="{t["text"]}" font-weight="bold">'
+                 f'{esc(e["role"])}</tspan><tspan fill="{t["muted"]}"> @ </tspan>'
+                 f'<tspan fill="{t["blue"]}">{esc(e["org"])}</tspan></text>')
+        p.append(f'<text x="{W - 20}" y="{y + 19}" font-size="12" fill="{t["muted"]}" text-anchor="end">{esc(e["when"])}</text>')
+        p.append(f'<text x="58" y="{y + 44}" font-size="13" fill="{t["muted"]}">{esc(clip(e["what"], 95))}</text>')
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+# ---------------------------------------------------------------------------
+# Research / IP item (its own image so a paper can link to its DOI)
+# ---------------------------------------------------------------------------
+
+def research_card(theme, item):
+    t = THEMES[theme]
+    lines = wrap(item["title"], 80)[:2]
+    h = 58 + len(lines) * 21
+    kind = item["kind"].upper()
+    colour = {"PAPER": t["green"], "MANUSCRIPT": t["blue"]}.get(kind, t["gold"])
+    p = [svg_open(W, h)]
+    p.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{h - 9}" rx="10" fill="{t["bg"]}" stroke="{t["stroke"]}"/>')
+    bw = chars(kind, 11) * 1.15 + 20
+    p.append(f'<rect x="20" y="16" width="{bw:.0f}" height="22" rx="11" fill="{colour}" fill-opacity="0.15"/>')
+    p.append(f'<text x="{20 + bw / 2:.0f}" y="31" font-size="11" letter-spacing="1.2" font-weight="bold" '
+             f'fill="{colour}" text-anchor="middle">{esc(kind)}</text>')
+    p.append(f'<text x="{32 + bw:.0f}" y="31" font-size="12" fill="{t["muted"]}">{esc(item["venue"])}</text>')
+    if item.get("url"):
+        p.append(f'<text x="{W - 20}" y="31" font-size="12" fill="{t["blue"]}" text-anchor="end">read ↗</text>')
+    for i, line in enumerate(lines):
+        p.append(f'<text x="20" y="{62 + i * 21}" font-size="15" font-weight="bold" fill="{t["text"]}">{esc(line)}</text>')
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+# ---------------------------------------------------------------------------
+# Project card (half width, two per row)
+# ---------------------------------------------------------------------------
+
+PW = 440
+
+
+def project_card(theme, proj, accent):
+    t = THEMES[theme]
+    h = 124
+    c = t[accent]
+    lines = wrap(proj["blurb"], 44)[:2]
+    p = [svg_open(PW, h)]
+    p.append(f'<rect x=".5" y=".5" width="{PW - 1}" height="{h - 9}" rx="10" fill="{t["bg"]}" stroke="{t["stroke"]}"/>')
+    p.append(f'<rect x=".5" y=".5" width="{PW - 1}" height="4" rx="2" fill="{c}"/>')
+    p.append(f'<text x="18" y="34" font-size="16" font-weight="bold" fill="{t["text"]}">{esc(proj["name"])}</text>')
+    p.append(f'<text x="{PW - 18}" y="34" font-size="13" fill="{t["muted"]}" text-anchor="end">↗</text>')
+    for i, line in enumerate(lines):
+        p.append(f'<text x="18" y="{57 + i * 18}" font-size="12.5" fill="{t["muted"]}">{esc(line)}</text>')
+    p.append(f'<text x="18" y="{h - 22}" font-size="11.5" fill="{c}">{esc(clip(proj["tech"], 52))}</text>')
+    p.append("</svg>")
+    return "\n".join(p)
 
 
 # ---------------------------------------------------------------------------
