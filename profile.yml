@@ -1,0 +1,37 @@
+# ---------------------------------------------------------------------------
+# Single place to edit the profile README.
+# Edit this file (even from the GitHub web editor) and the workflows rebuild
+# the neofetch banner, the README blocks and the Doom GIF automatically.
+#
+# Open-source PRs are NOT listed here: they are fetched from GitHub
+# automatically (merged PRs you authored in repos you don't own).
+# ---------------------------------------------------------------------------
+
+# Rows shown in the neofetch-style intro banner (keep it ~12 rows).
+neofetch:
+  - [OS,       "Arch (btw) / Linux / Windows 11"]
+  - [Host,     "KJSCE, Mumbai (local) | Barclays (remote)"]
+  - [Kernel,   "B.Tech Computer Engineering — CGPA 9.63/10"]
+  - [Uptime,   "22 yrs, 10 yrs of coding"]
+  - [Packages, "npm · pip · pub · gradle"]
+  - [Shell,    "zsh / bash / powershell"]
+  - [DE,       "VS Code (Dark+)"]
+  - [Terminal, "Alacritty / Windows Terminal"]
+  - [CPU,      "Brain @ overclocked, severely sleep-deprived"]
+  - [GPU,      "Imagination Engine (unlimited VRAM)"]
+  - [Memory,   "16GB RAM, mostly filled with LeetCode"]
+
+# Shown in the README and in the Doom HUD. Newest / best first, keep it short.
+achievements:
+  - "Winner — Hedera Track, ETHGlobal ETHOnline 2026"
+  - "Winner — Most Addictive Game (8th Wall Jam)"
+  - "1st Runner-Up ISTE Pixel Wars | 5x Finalist"
+  - "Featured by Markiplier & Jacksepticeye (30M+)"
+  - "CodeChef 4-Star | 500+ LeetCode"
+  - "CVR'26 Springer — Gesture-Based Assistive Tool"
+  - "Sanketika ISL Dataset (IP)"
+
+# Auto-fetched open-source PR list.
+prs:
+  limit: 6            # how many to show
+  exclude_repos: []   # e.g. ["someorg/somerepo"] to hide a repo
