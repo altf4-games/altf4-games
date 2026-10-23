@@ -79,7 +79,7 @@ def terminal(theme, user, host, rows, art_rows, command="neofetch"):
     """art_rows: [[(char, '#rrggbb'), ...], ...] — the colored ASCII logo."""
     t = THEMES[theme]
     prompt = f"{user}@{host}"
-    art_w = 330
+    art_w = 360
     cols = max((len(r) for r in art_rows), default=1)
     art_fs = art_w / (cols * 0.6)
     art_lh = art_fs * 1.12
@@ -122,7 +122,7 @@ def terminal(theme, user, host, rows, art_rows, command="neofetch"):
     logo_end = start + len(art_rows) * 0.025
 
     # info column, vertically centred on the logo
-    rx_ = 390
+    rx_ = 412
     block_h = 40 + len(rows) * 25 + 24
     y0 = art_top + max(0, (art_bottom - art_top - block_h) / 2) + 14
     p.append(f'<text x="{rx_}" y="{y0:.0f}" font-size="16" font-weight="bold" fill="{t["gold"]}" opacity="0">'

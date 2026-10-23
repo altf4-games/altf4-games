@@ -10,7 +10,7 @@
 terminal:
   user: altf4-games
   host: github
-  # Logo = the colored ASCII portrait in ascii-art.html
+  # Logo = the colored ASCII art in ascii-art.html (dark) / ascii-art_light.html (light)
   # {oss_prs} is replaced with your live count of merged open-source PRs.
   rows:
     - [OS,       "B.Tech Computer Engineering @ KJSCE '27"]
@@ -26,14 +26,14 @@ experience:
     org: Barclays (Investment Banking)
     when: Jun 2026 – Aug 2026
     what: React/FastAPI tooling over a 1.17M-row table · graph-based task engine · Kafka
-  - role: Founder & Sole Developer
-    org: ALTF4 Games
-    when: 2016 – present
-    what: 22 titles, 100k+ downloads · Captive ported to Nintendo via Upscale Studio
   - role: Game Development & XR Intern
     org: VyuXR Immersive Studios
     when: May 2025 – Jun 2025
     what: Unity mixed-reality features · 30% drop in crash rates
+  - role: Founder & Sole Developer
+    org: ALTF4 Games
+    when: 2016 – present
+    what: 22 titles, 100k+ downloads · Captive ported to Nintendo via Upscale Studio
 
 research:
   - kind: Paper

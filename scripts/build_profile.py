@@ -26,7 +26,7 @@ from profile_data import ROOT, load_profile, oss_data
 ASSETS = os.path.join(ROOT, "assets")
 README = os.path.join(ROOT, "README.md")
 RAW = "./assets"
-ART = "ascii-art.html"   # colored block-character portrait (Kiryu)
+ART = {"dark": "ascii-art.html", "light": "ascii-art_light.html"}   # Kiryu, as drawn
 
 SECTIONS = [
     ("s01", "01", "now playing", "~/doom", "red"),
@@ -67,9 +67,9 @@ class _AsciiParser(HTMLParser):
             self.rows[-1].extend((ch, self._color) for ch in data if ch != "\n")
 
 
-def load_art():
+def load_art(theme):
     parser = _AsciiParser()
-    with open(os.path.join(ROOT, ART), encoding="utf-8") as f:
+    with open(os.path.join(ROOT, ART[theme]), encoding="utf-8") as f:
         parser.feed(f.read())
     return [r for r in parser.rows if r]
 
@@ -113,9 +113,8 @@ def main():
         for old in glob.glob(os.path.join(ASSETS, "*", pattern)):
             os.remove(old)
 
-    art = load_art()
     for theme in kit.THEMES:
-        write(theme, "terminal.svg", kit.terminal(theme, term["user"], term["host"], rows, art))
+        write(theme, "terminal.svg", kit.terminal(theme, term["user"], term["host"], rows, load_art(theme)))
         for name, num, title, path, accent in SECTIONS:
             write(theme, f"{name}.svg", kit.section(theme, num, title, path, accent))
         write(theme, "experience.svg", kit.experience(theme, profile.get("experience", [])))
