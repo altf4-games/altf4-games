@@ -1,0 +1,45 @@
+{
+  "prs": [
+    {
+      "repo": "volcano-sh/agentcube",
+      "number": 484,
+      "title": "router: stop duplicating X-Forwarded-For",
+      "url": "https://github.com/volcano-sh/agentcube/pull/484",
+      "merged_at": "2026-10-23T01:26:53Z",
+      "stars": 176
+    },
+    {
+      "repo": "microsoft/data-formulator",
+      "number": 436,
+      "title": "Add Hindi (hi) locale for frontend i18n",
+      "url": "https://github.com/microsoft/data-formulator/pull/436",
+      "merged_at": "2026-08-31T23:35:58Z",
+      "stars": 17591
+    },
+    {
+      "repo": "ultralytics/ultralytics",
+      "number": 25824,
+      "title": "Fix #25764: Don't send local project paths as Platform slugs",
+      "url": "https://github.com/ultralytics/ultralytics/pull/25824",
+      "merged_at": "2026-08-20T00:45:09Z",
+      "stars": 62782
+    },
+    {
+      "repo": "microsoft/apm",
+      "number": 1367,
+      "title": "refactor(cli): clean up compilation config and registry cursor",
+      "url": "https://github.com/microsoft/apm/pull/1367",
+      "merged_at": "2026-05-26T20:50:31Z",
+      "stars": 4116
+    },
+    {
+      "repo": "microsoft/data-formulator",
+      "number": 351,
+      "title": "fix: 2 agent bugs and improve test coverage",
+      "url": "https://github.com/microsoft/data-formulator/pull/351",
+      "merged_at": "2026-05-21T18:16:38Z",
+      "stars": 17591
+    }
+  ],
+  "total": 5
+}

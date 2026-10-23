@@ -8,9 +8,9 @@ on:
     branches: [main]
     paths:
       - profile.yml
-      - ascii-art*.html
-      - scripts/generate_banner.py
-      - scripts/update_readme.py
+      - README.md
+      - scripts/build_profile.py
+      - scripts/svg_kit.py
       - scripts/profile_data.py
       - .github/workflows/update-readme.yml
 
@@ -36,21 +36,17 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml
 
-      - name: Generate neofetch banner
-        run: python scripts/generate_banner.py
-
-      - name: Update README blocks (PRs, achievements)
+      - name: Build cards and README
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
-        run: python scripts/update_readme.py
+        run: python scripts/build_profile.py
 
-      # Only commits when something actually changed, so quiet days add no
-      # history.
+      # Output is deterministic, so quiet days add no history.
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/dark_mode.svg assets/light_mode.svg
+          git add -A README.md assets data
           git diff --staged --quiet || git commit -m "chore: update README"
           git push

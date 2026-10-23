@@ -3,6 +3,7 @@ Shared data layer for the profile generators.
 
   load_profile()   -> contents of profile.yml (neofetch rows, achievements, ...)
   fetch_prs()      -> merged PRs the user authored in repos they don't own
+  oss_data()       -> fetch_prs() backed by the data/oss.json cache
   collect_stats()  -> live GitHub stats (repos, stars, followers, commits, PRs)
 
 Network helpers return None on failure so callers can keep the previous
@@ -13,6 +14,7 @@ workflow run. No personal access token needs to be created or stored.
 """
 
 import os
+import json
 import datetime
 import requests
 import yaml
@@ -58,10 +60,11 @@ def graphql(query, variables):
 
 def fetch_prs(limit=6, exclude_repos=()):
     """Latest merged PRs authored by USERNAME in repos owned by someone else.
-    Returns a list of dicts sorted newest-merged first, or None on failure."""
+    Returns {"prs": [...newest first], "total": n}, or None on failure."""
     query = """
     query($q: String!) {
       search(query: $q, type: ISSUE, first: 50) {
+        issueCount
         nodes {
           ... on PullRequest {
             number title url mergedAt
@@ -92,7 +95,29 @@ def fetch_prs(limit=6, exclude_repos=()):
             "stars": n["repository"]["stargazerCount"],
         })
     prs.sort(key=lambda p: p["merged_at"], reverse=True)
-    return prs[:limit]
+    return {"prs": prs[:limit], "total": data["search"]["issueCount"]}
+
+
+OSS_CACHE = os.path.join(ROOT, "data", "oss.json")
+
+
+def oss_data(profile):
+    """fetch_prs() with a committed cache: a successful fetch refreshes
+    data/oss.json, a failed one (or a local run without a token) reuses it."""
+    cfg = profile.get("prs", {})
+    fresh = fetch_prs(cfg.get("limit", 5), cfg.get("exclude_repos", []))
+    if fresh is not None:
+        os.makedirs(os.path.dirname(OSS_CACHE), exist_ok=True)
+        with open(OSS_CACHE, "w", encoding="utf-8") as f:
+            json.dump(fresh, f, indent=2)
+            f.write("\n")
+        return fresh
+    print("PR fetch failed; using cached", OSS_CACHE)
+    try:
+        with open(OSS_CACHE, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"prs": [], "total": 0}
 
 
 def _get(url, **params):

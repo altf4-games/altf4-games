@@ -19,7 +19,7 @@ import subprocess
 
 from PIL import Image, ImageDraw, ImageFont
 
-from profile_data import USERNAME, load_profile, fetch_prs, collect_stats
+from profile_data import USERNAME, load_profile, oss_data, collect_stats
 
 FPS = 12
 GAME_W, GAME_H = 576, 360
@@ -29,14 +29,16 @@ TYPE_SECONDS = 9      # how long the panel takes to type itself out
 MSG_SECONDS = 3       # how long each Doom-style message stays up
 QUALITY = 45          # animated WebP quality (0-100); GIF would be ~4x bigger
 
-BG = (11, 14, 20)
-CHROME = (23, 26, 33)
-DIM = (139, 144, 156)
-TEXT = (215, 218, 224)
-GREEN = (95, 215, 95)
-CYAN = (86, 212, 221)
-GOLD = (229, 192, 123)
-BLUE = (97, 175, 239)
+# GitHub dark palette, matching the terminal card in assets/dark/
+BG = (13, 17, 23)
+CHROME = (22, 27, 34)
+DIM = (139, 148, 158)
+TEXT = (230, 237, 243)
+GREEN = (126, 231, 135)
+CYAN = (56, 189, 248)
+GOLD = (227, 179, 65)
+BLUE = (56, 189, 248)
+PURPLE = (163, 113, 247)
 DOOM_RED = (230, 40, 40)
 
 FONT_PATHS = [
@@ -63,7 +65,7 @@ def short_num(n):
 
 def panel_lines(data, width_chars):
     """List of lines; each line is a list of (text, colour) segments."""
-    prompt = f"{USERNAME}@doom:~$ "
+    prompt = f"{data.get('user', USERNAME)}@doom:~$ "
     lines = []
 
     s = data.get("stats")
@@ -80,22 +82,21 @@ def panel_lines(data, width_chars):
         lines.append([(prompt, GREEN), ("git log --oss", TEXT)])
         for p in prs[:5]:
             ref = f" #{p['number']}"
-            lines.append([(" ✓ ", GREEN), (clip(p["repo"], width_chars - 4 - len(ref)), BLUE), (ref, DIM)])
+            lines.append([(" ✓ ", PURPLE), (clip(p["repo"], width_chars - 4 - len(ref)), BLUE), (ref, DIM)])
 
     wins = data.get("achievements") or []
     if wins:
         lines.append([(prompt, GREEN), ("cat wins", TEXT)])
         for a in wins[:3]:
-            lines.append([(" ★ ", GOLD), (clip(a, width_chars - 3), TEXT)])
+            lines.append([(" ★ ", GOLD), (clip(f"{a['title']} · {a['event']}", width_chars - 3), TEXT)])
     return lines
 
 
 def doom_messages(data):
     msgs = [f"MERGED PR #{p['number']} INTO {p['repo']}!".upper() for p in (data.get("prs") or [])[:4]]
-    for a in (data.get("achievements") or [])[:2]:
-        head, _, rest = a.partition("—")
-        won = head.strip().lower() == "winner" and rest
-        msgs.append(f"WON: {rest.strip()}!".upper() if won else f"PICKED UP: {a}".upper())
+    for a in (data.get("achievements") or [])[:3]:
+        verb = "WON" if a["badge"].lower() == "winner" else a["badge"]
+        msgs.append(f"{verb}: {a['title']}!".upper())
     return msgs or [f"{USERNAME.upper()} HAS ENTERED THE GAME!"]
 
 
@@ -111,7 +112,7 @@ def draw_panel(img, lines, chars_shown, cursor_on):
     for i, c in enumerate([(255, 95, 86), (255, 189, 46), (39, 201, 63)]):
         d.ellipse([x0 + 10 + i * 16, 9, x0 + 18 + i * 16, 17], fill=c)
     f_title = font(11)
-    d.text((x0 + PANEL_W / 2 + 20, 13), f"{USERNAME} — tty1", font=f_title, fill=DIM, anchor="mm")
+    d.text((x0 + PANEL_W / 2 + 20, 13), "doom — tty1", font=f_title, fill=DIM, anchor="mm")
 
     f = font(12)
     y, budget = 40, chars_shown
@@ -197,10 +198,9 @@ def main():
         with open(args.data, encoding="utf-8") as f:
             data = json.load(f)
     else:
-        cfg = profile.get("prs", {})
-        data = {"prs": fetch_prs(cfg.get("limit", 6), cfg.get("exclude_repos", [])),
-                "stats": collect_stats()}
+        data = {"prs": oss_data(profile)["prs"], "stats": collect_stats()}
     data.setdefault("achievements", profile.get("achievements", []))
+    data.setdefault("user", profile.get("terminal", {}).get("user", USERNAME))
     build(args.raw, args.out, data)
 
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="78" viewBox="0 0 900 78"><style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace;white-space:pre}</style>
+<rect x=".5" y=".5" width="899" height="69" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+<circle cx="34" cy="35" r="16" fill="#8250df" fill-opacity="0.15"/>
+<path d="M5 3.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm0 2.122a2.25 2.25 0 1 0-1.5 0v.878A2.25 2.25 0 0 0 5.75 8.5h1.5v2.128a2.251 2.251 0 1 0 1.5 0V8.5h1.5a2.25 2.25 0 0 0 2.25-2.25v-.878a2.25 2.25 0 1 0-1.5 0v.878a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 5 6.25v-.878zm3.75 7.378a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm3-8.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z" fill="#8250df" transform="translate(24 25) scale(1.25)"/>
+<text x="64" y="30" font-size="15"><tspan fill="#59636e">volcano-sh/</tspan><tspan fill="#1f2328" font-weight="bold">agentcube</tspan></text>
+<text x="254" y="30" font-size="14" fill="#8250df">#484</text>
+<text x="64" y="53" font-size="13" fill="#59636e">router: stop duplicating X-Forwarded-For</text>
+<rect x="826" y="15" width="54" height="22" rx="11" fill="#eff2f5"/>
+<text x="853" y="30" font-size="12" fill="#9a6700" text-anchor="middle">★ 176</text>
+<text x="880" y="54" font-size="12" fill="#59636e" text-anchor="end">merged Oct 2026</text>
+</svg>

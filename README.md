@@ -1,56 +1,41 @@
+<!-- Edit profile.yml, not this file: the cards in assets/ and the PR list
+     below are rebuilt by .github/workflows/update-readme.yml. -->
+
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/dark_mode.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/light_mode.svg">
-    <img alt="neofetch style intro" src="./assets/dark_mode.svg" width="900">
-  </picture>
 
-  <br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/terminal.svg"><img src="./assets/light/terminal.svg" alt="pradyum@altf4 — neofetch: B.Tech Computer Engineering @ KJSCE, Barclays, game dev · full stack · AI/ML" width="900"></picture>
 
-  <img src="https://skillicons.dev/icons?i=c,cpp,cs,java,py,dart,js,ts,react,nextjs,threejs,express,fastapi,flutter&perline=14" alt="languages and frameworks">
-  <br>
-  <img src="https://skillicons.dev/icons?i=unity,unreal,tensorflow,sklearn,mongodb,postgres,redis,firebase,git,docker,aws,linux,arch,vscode&perline=14" alt="tools">
+<br><br>
 
-  <br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=cpp,cs,py,ts,react,nextjs,threejs,fastapi,flutter,unity,unreal,tensorflow,postgres,docker,aws&theme=dark&perline=15"><img src="https://skillicons.dev/icons?i=cpp,cs,py,ts,react,nextjs,threejs,fastapi,flutter,unity,unreal,tensorflow,postgres,docker,aws&theme=light&perline=15" alt="C++, C#, Python, TypeScript, React, Next.js, Three.js, FastAPI, Flutter, Unity, Unreal, TensorFlow, PostgreSQL, Docker, AWS"></picture>
 
-  <img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/doom.webp" alt="Doom playing itself, with a live altf4-games HUD" width="900">
+<br><br>
+
+<a href="https://linkedin.com/in/pradyum-mistry"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/LINKEDIN-0d1117?style=flat-square&logo=linkedin&logoColor=ffffff"><img src="https://img.shields.io/badge/LINKEDIN-ffffff?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn"></picture></a>
+<a href="https://altf4-games.itch.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/ITCH.IO-0d1117?style=flat-square&logo=itchdotio&logoColor=ffffff"><img src="https://img.shields.io/badge/ITCH.IO-ffffff?style=flat-square&logo=itchdotio&logoColor=FA5C5C" alt="itch.io"></picture></a>
+<a href="https://leetcode.com/u/pradyum_mistry"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/LEETCODE-0d1117?style=flat-square&logo=leetcode&logoColor=ffffff"><img src="https://img.shields.io/badge/LEETCODE-ffffff?style=flat-square&logo=leetcode&logoColor=FFA116" alt="LeetCode"></picture></a>
+<a href="https://www.codechef.com/users/pradyum_m"><picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/CODECHEF-0d1117?style=flat-square&logo=codechef&logoColor=ffffff"><img src="https://img.shields.io/badge/CODECHEF-ffffff?style=flat-square&logo=codechef&logoColor=5B4638" alt="CodeChef"></picture></a>
+
 </div>
 
-### 🔧 Recent open-source PRs
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s01.svg"><img src="./assets/light/s01.svg" alt="01 — now playing"></picture>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/doom.webp" alt="Doom playing itself, with a live HUD of merged PRs and wins" width="900">
+</div>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s02.svg"><img src="./assets/light/s02.svg" alt="02 — open source"></picture>
 
 <!-- PRS:START -->
-| Repo | PR | Merged |
-|---|---|---|
-| [**volcano-sh/agentcube**](https://github.com/volcano-sh/agentcube) ⭐ 176 | [#484](https://github.com/volcano-sh/agentcube/pull/484) router: stop duplicating X-Forwarded-For | Oct 2026 |
-| [**microsoft/data-formulator**](https://github.com/microsoft/data-formulator) ⭐ 17.6k | [#436](https://github.com/microsoft/data-formulator/pull/436) Add Hindi (hi) locale for frontend i18n | Aug 2026 |
-| [**ultralytics/ultralytics**](https://github.com/ultralytics/ultralytics) ⭐ 62.8k | [#25824](https://github.com/ultralytics/ultralytics/pull/25824) Fix #25764: Don't send local project paths as Platform slugs | Aug 2026 |
-| [**microsoft/apm**](https://github.com/microsoft/apm) ⭐ 4.1k | [#1367](https://github.com/microsoft/apm/pull/1367) refactor(cli): clean up compilation config and registry c... | May 2026 |
-| [**microsoft/data-formulator**](https://github.com/microsoft/data-formulator) ⭐ 17.6k | [#351](https://github.com/microsoft/data-formulator/pull/351) fix: 2 agent bugs and improve test coverage | May 2026 |
+<a href="https://github.com/volcano-sh/agentcube/pull/484"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-1.svg"><img src="./assets/light/pr-1.svg" alt="volcano-sh/agentcube #484: router: stop duplicating X-Forwarded-For"></picture></a>
+<a href="https://github.com/microsoft/data-formulator/pull/436"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-2.svg"><img src="./assets/light/pr-2.svg" alt="microsoft/data-formulator #436: Add Hindi (hi) locale for frontend i18n"></picture></a>
+<a href="https://github.com/ultralytics/ultralytics/pull/25824"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-3.svg"><img src="./assets/light/pr-3.svg" alt="ultralytics/ultralytics #25824: Fix #25764: Don&#x27;t send local project paths as Platform slugs"></picture></a>
+<a href="https://github.com/microsoft/apm/pull/1367"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-4.svg"><img src="./assets/light/pr-4.svg" alt="microsoft/apm #1367: refactor(cli): clean up compilation config and registry cursor"></picture></a>
+<a href="https://github.com/microsoft/data-formulator/pull/351"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/pr-5.svg"><img src="./assets/light/pr-5.svg" alt="microsoft/data-formulator #351: fix: 2 agent bugs and improve test coverage"></picture></a>
 <!-- PRS:END -->
 
-### 🏆 Achievements
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/s03.svg"><img src="./assets/light/s03.svg" alt="03 — wins"></picture>
 
-<!-- ACHIEVEMENTS:START -->
-- 🏆 Winner — Hedera Track, ETHGlobal ETHOnline 2026
-- 🏆 Winner — Most Addictive Game (8th Wall Jam)
-- 🏆 1st Runner-Up ISTE Pixel Wars | 5x Finalist
-- 🏆 Featured by Markiplier & Jacksepticeye (30M+)
-- 🏆 CodeChef 4-Star | 500+ LeetCode
-- 🏆 CVR'26 Springer — Gesture-Based Assistive Tool
-- 🏆 Sanketika ISL Dataset (IP)
-<!-- ACHIEVEMENTS:END -->
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/wins.svg"><img src="./assets/light/wins.svg" alt="Wins and recognition"></picture>
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/altf4-games/altf4-games/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/altf4-games/altf4-games/output/github-contribution-grid-snake.svg">
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/altf4-games/altf4-games/output/github-contribution-grid-snake-dark.svg">
-  </picture>
-
-  <br><br>
-
-  <a href="https://linkedin.com/in/pradyum-mistry"><img src="https://img.shields.io/badge/LinkedIn-pradyum--mistry-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://altf4-games.itch.io"><img src="https://img.shields.io/badge/itch.io-altf4--games-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white" alt="itch.io"></a>
-  <a href="https://leetcode.com/u/pradyum_mistry"><img src="https://img.shields.io/badge/LeetCode-pradyum__mistry-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"></a>
-  <a href="https://www.codechef.com/users/pradyum_m"><img src="https://img.shields.io/badge/CodeChef-pradyum__m-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"></a>
-</div>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/footer.svg"><img src="./assets/light/footer.svg" alt="exit — or just press Alt+F4"></picture>
