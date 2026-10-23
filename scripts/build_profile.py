@@ -1,8 +1,8 @@
 """
 Builds everything the profile README shows, from profile.yml + GitHub data:
 
-  assets/{dark,light}/terminal.svg        animated neofetch card (ASCII logo)
-  assets/{dark,light}/s01..s06.svg        numbered section headers
+  assets/{dark,light}/neofetch.svg        animated neofetch card (ASCII logo)
+  assets/{dark,light}/section-*.svg       numbered section headers
   assets/{dark,light}/experience.svg      experience timeline
   assets/{dark,light}/pr-N.svg            one card per merged open-source PR
   assets/{dark,light}/research-N.svg      papers / IP
@@ -27,14 +27,20 @@ README = os.path.join(ROOT, "README.md")
 RAW = "./assets"
 ART = {"dark": "ascii-art.html", "light": "ascii-art_light.html"}   # Kiryu, as drawn
 
+# Header files are named after the section, not its number, so reordering
+# never serves a stale header from GitHub's image cache.
 SECTIONS = [
-    ("s01", "01", "whoami", "~/neofetch", "green"),
-    ("s02", "02", "now playing", "~/doom", "red"),
-    ("s03", "03", "experience", "~/work", "blue"),
-    ("s04", "04", "open source", "~/merged-prs", "purple"),
-    ("s05", "05", "research", "~/papers", "green"),
-    ("s06", "06", "wins", "~/trophies", "gold"),
+    ("whoami", "~/neofetch", "green"),
+    ("now playing", "~/doom", "red"),
+    ("experience", "~/work", "blue"),
+    ("open source", "~/merged-prs", "purple"),
+    ("research", "~/papers", "green"),
+    ("wins", "~/trophies", "gold"),
 ]
+
+
+def section_file(title):
+    return "section-" + title.replace(" ", "-") + ".svg"
 
 
 class _AsciiParser(HTMLParser):
@@ -111,9 +117,9 @@ def main():
             os.remove(old)
 
     for theme in kit.THEMES:
-        write(theme, "terminal.svg", kit.terminal(theme, term["user"], term["host"], rows, load_art(theme)))
-        for name, num, title, path, accent in SECTIONS:
-            write(theme, f"{name}.svg", kit.section(theme, num, title, path, accent))
+        write(theme, "neofetch.svg", kit.terminal(theme, term["user"], term["host"], rows, load_art(theme)))
+        for i, (title, path, accent) in enumerate(SECTIONS):
+            write(theme, section_file(title), kit.section(theme, f"{i + 1:02d}", title, path, accent))
         write(theme, "experience.svg", kit.experience(theme, profile.get("experience", [])))
         for i, p in enumerate(prs):
             merged = datetime.date.fromisoformat(p["merged_at"][:10]).strftime("%b %Y")

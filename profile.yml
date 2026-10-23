@@ -11,6 +11,7 @@ terminal:
   user: altf4-games
   host: github
   # Logo = the colored ASCII art in ascii-art.html (dark) / ascii-art_light.html (light)
+  # Values longer than the card are clipped with …
   # {oss_prs} is replaced with your live count of merged open-source PRs.
   rows:
     - [OS,       "B.Tech Computer Engineering @ KJSCE '27"]
@@ -18,8 +19,12 @@ terminal:
     - [Kernel,   "Game Dev · Full Stack · AI/ML"]
     - [Uptime,   "10 yrs of coding · CGPA 9.63/10"]
     - [Packages, "22 games shipped · 100k+ downloads"]
-    - [PRs,      "{oss_prs} merged into open source"]
-    - [CPU,      "Brain @ overclocked, sleep-deprived"]
+    - [PRs,       "{oss_prs} merged into open source"]
+    - [Languages, "C++ · C# · Python · Go · TypeScript"]
+    - [Stack,     "React · Next.js · FastAPI · Flutter"]
+    - [Engines,   "Unity · Unreal Engine"]
+    - [Cloud,     "AWS · Docker · Kubernetes · PostgreSQL"]
+    - [CPU,       "Brain @ overclocked, sleep-deprived"]
 
 experience:
   - role: Software Engineering Intern

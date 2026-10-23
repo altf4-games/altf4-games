@@ -130,7 +130,9 @@ def terminal(theme, user, host, rows, art_rows, command="neofetch"):
     p.append(f'<rect x="{rx_}" y="{y0 + 12:.0f}" width="{chars(prompt, 16):.0f}" height="1.5" fill="{t["faint"]}" opacity="0">'
              f'{fade_in(start)}</rect>')
     y = y0 + 42
+    room = int((W - 24 - rx_) / (14.5 * 0.6))
     for i, (label, value) in enumerate(rows):
+        value = clip(value, room - len(label) - 2)
         p.append(f'<text x="{rx_}" y="{y:.0f}" font-size="14.5" opacity="0">'
                  f'<tspan fill="{t["blue"]}" font-weight="bold">{esc(label)}</tspan>'
                  f'<tspan fill="{t["text"]}">: {esc(value)}</tspan>{fade_in(start + 0.2 + i * 0.12)}</text>')
