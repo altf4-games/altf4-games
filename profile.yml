@@ -7,6 +7,10 @@
 # automatically (merged PRs you authored in repos you don't own).
 # ---------------------------------------------------------------------------
 
+# The portfolio site (PortfoliOS) keeps the current resume link in its admin
+# panel; the README's RESUME badge follows it via <portfolio>/api/content.
+portfolio: https://pradyum.vercel.app
+
 terminal:
   user: altf4-games
   host: github

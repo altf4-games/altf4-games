@@ -1,6 +1,8 @@
 name: Update README
 
 on:
+  schedule:
+    - cron: "17 3 * * *"   # daily — follows the resume link set in the portfolio admin panel
   workflow_dispatch: {}    # manual run from the Actions tab
   push:
     branches: [main]
@@ -9,6 +11,7 @@ on:
       - scripts/build_profile.py
       - scripts/svg_kit.py
       - scripts/profile_data.py
+      - README.md
       - .github/workflows/update-readme.yml
 
 permissions:
@@ -33,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml requests
 
-      - name: Build footer
+      - name: Build footer and resume badge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
@@ -44,6 +47,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A assets
+          git add -A README.md assets
           git diff --staged --quiet || git commit -m "chore: update README"
           git push

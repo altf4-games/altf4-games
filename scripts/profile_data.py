@@ -4,6 +4,7 @@ Shared data layer for the profile generators.
   load_profile()   -> contents of profile.yml (neofetch rows, achievements, ...)
   fetch_prs()      -> merged PRs the user authored in repos they don't own
   oss_data()       -> fetch_prs() backed by the data/oss.json cache
+  fetch_resume_url() -> live resume link from the portfolio site
   collect_stats()  -> live GitHub stats (repos, stars, followers, commits, PRs)
 
 Network helpers return None on failure so callers can keep the previous
@@ -118,6 +119,17 @@ def oss_data(profile):
             return json.load(f)
     except FileNotFoundError:
         return {"prs": [], "total": 0}
+
+
+def fetch_resume_url(site):
+    """Current resume link from the portfolio's live content API, or None."""
+    try:
+        r = SESSION.get(site.rstrip("/") + "/api/content", timeout=15)
+        r.raise_for_status()
+        url = r.json()["profile"]["resumeUrl"]
+    except (requests.RequestException, KeyError, ValueError):
+        return None
+    return url if url.startswith("https://") else None
 
 
 def _get(url, **params):
