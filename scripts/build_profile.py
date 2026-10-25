@@ -53,11 +53,13 @@ def write(theme, name, svg):
 def update_resume_badge(url):
     with open(README, encoding="utf-8") as f:
         text = f.read()
+    # The markers sit inline on the PORTFOLIO badge's line: a comment at the
+    # start of a line would end the paragraph and push the badges onto new rows.
     pattern = re.compile(r"(<!-- RESUME:START -->).*?(<!-- RESUME:END -->)", re.S)
     if not pattern.search(text):
         raise SystemExit("README is missing the RESUME markers")
     body = badge(url, "RESUME", DOC_PATH, "1f2328")
-    text = pattern.sub(lambda m: f"{m.group(1)}\n{body}\n{m.group(2)}", text)
+    text = pattern.sub(lambda m: f"{m.group(1)}{body}{m.group(2)}", text)
     with open(README, "w", encoding="utf-8") as f:
         f.write(text)
 
