@@ -14,7 +14,7 @@
       "title": "Add Hindi (hi) locale for frontend i18n",
       "url": "https://github.com/microsoft/data-formulator/pull/436",
       "merged_at": "2026-08-31T23:35:58Z",
-      "stars": 17590
+      "stars": 17596
     },
     {
       "repo": "ultralytics/ultralytics",
@@ -22,7 +22,7 @@
       "title": "Fix #25764: Don't send local project paths as Platform slugs",
       "url": "https://github.com/ultralytics/ultralytics/pull/25824",
       "merged_at": "2026-08-20T00:45:09Z",
-      "stars": 62796
+      "stars": 62819
     },
     {
       "repo": "microsoft/apm",
@@ -30,7 +30,7 @@
       "title": "refactor(cli): clean up compilation config and registry cursor",
       "url": "https://github.com/microsoft/apm/pull/1367",
       "merged_at": "2026-05-26T20:50:31Z",
-      "stars": 4116
+      "stars": 4120
     },
     {
       "repo": "microsoft/data-formulator",
@@ -38,7 +38,7 @@
       "title": "fix: 2 agent bugs and improve test coverage",
       "url": "https://github.com/microsoft/data-formulator/pull/351",
       "merged_at": "2026-05-21T18:16:38Z",
-      "stars": 17590
+      "stars": 17596
     }
   ],
   "total": 5
