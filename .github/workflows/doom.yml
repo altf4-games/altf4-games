@@ -1,4 +1,4 @@
-name: Generate Doom HUD
+name: Generate terminal animation
 
 on:
   schedule:
@@ -9,8 +9,11 @@ on:
     paths:
       - profile.yml
       - scripts/record_doom.sh
-      - scripts/build_doom_anim.py
+      - scripts/build_terminal_anim.py
+      - scripts/build_profile.py
+      - scripts/svg_kit.py
       - scripts/profile_data.py
+      - ascii-art.html
       - .github/workflows/doom.yml
 
 permissions:
@@ -48,13 +51,13 @@ jobs:
       - name: Record demo
         run: bash scripts/record_doom.sh doom_raw.mp4 demo1 18 5
 
-      - name: Build animation with live HUD
+      - name: Build terminal animation (neofetch, Doom, wins, work)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
         run: |
           mkdir -p dist
-          python scripts/build_doom_anim.py doom_raw.mp4 dist/doom.webp
+          python scripts/build_terminal_anim.py doom_raw.mp4 dist/terminal.webp
           ls -la dist
 
       # Published to its own branch and force-pushed each time, so the

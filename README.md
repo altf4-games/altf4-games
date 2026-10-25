@@ -1,23 +1,10 @@
 <!-- Edit profile.yml, not this file: the cards in assets/ and the marked
-     blocks below are rebuilt by .github/workflows/update-readme.yml. -->
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/section-whoami.svg"><img src="./assets/light/section-whoami.svg" alt="01 — whoami"></picture>
-
-<div align="center">
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/neofetch.svg"><img src="./assets/light/neofetch.svg" alt="altf4-games@github — neofetch: B.Tech Computer Engineering @ KJSCE, SWE Intern @ Barclays, game dev · full stack · AI/ML; C++, C#, Python, Go, TypeScript; React, Next.js, FastAPI, Flutter; Unity, Unreal; AWS, Docker, Kubernetes" width="900"></picture>
-
-</div>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/section-now-playing.svg"><img src="./assets/light/section-now-playing.svg" alt="02 — now playing"></picture>
+     blocks below are rebuilt by .github/workflows/update-readme.yml, and the
+     terminal animation by .github/workflows/doom.yml. -->
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/doom.webp" alt="Doom playing itself, with a live HUD of merged PRs and wins" width="900">
+<img src="https://raw.githubusercontent.com/altf4-games/altf4-games/doom/terminal.webp" alt="altf4-games@github terminal: neofetch (B.Tech Computer Engineering @ KJSCE, SWE Intern @ Barclays; C++, C#, Python, Go, TypeScript; React, Next.js, FastAPI, Flutter; Unity, Unreal; AWS, Docker, Kubernetes), then a split screen with Doom playing itself next to wins (ETHGlobal Hedera track, 8th Wall game jam, ISTE Pixel Wars) and work (Barclays, VyuXR, ALTF4 Games)" width="900">
 </div>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/section-experience.svg"><img src="./assets/light/section-experience.svg" alt="03 — experience"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/experience.svg"><img src="./assets/light/experience.svg" alt="Experience: SWE Intern at Barclays; Game Dev & XR Intern at VyuXR; Founder of ALTF4 Games"></picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/section-open-source.svg"><img src="./assets/light/section-open-source.svg" alt="04 — open source"></picture>
 
@@ -36,10 +23,6 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/research-2.svg"><img src="./assets/light/research-2.svg" alt="Manuscript: On-Device Assistive Perception for Blind Pedestrian Navigation and Sign-Language Communication"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/research-3.svg"><img src="./assets/light/research-3.svg" alt="Copyright: Sanketika — Indian Sign Language dataset"></picture>
 <!-- RESEARCH:END -->
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/section-wins.svg"><img src="./assets/light/section-wins.svg" alt="06 — wins"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/dark/wins.svg"><img src="./assets/light/wins.svg" alt="Wins and recognition"></picture>
 
 <div align="center">
 

@@ -1,12 +1,9 @@
 """
 Builds everything the profile README shows, from profile.yml + GitHub data:
 
-  assets/{dark,light}/neofetch.svg        animated neofetch card (ASCII logo)
   assets/{dark,light}/section-*.svg       numbered section headers
-  assets/{dark,light}/experience.svg      experience timeline
   assets/{dark,light}/pr-N.svg            one card per merged open-source PR
   assets/{dark,light}/research-N.svg      papers / IP
-  assets/{dark,light}/wins.svg            achievements card
   assets/{dark,light}/footer.svg
   README.md  PRS / RESEARCH blocks (cards that need their own link)
 
@@ -29,13 +26,11 @@ ART = {"dark": "ascii-art.html", "light": "ascii-art_light.html"}   # Kiryu, as 
 
 # Header files are named after the section, not its number, so reordering
 # never serves a stale header from GitHub's image cache.
+# neofetch, Doom, experience and wins live in the terminal animation
+# (scripts/build_terminal_anim.py), so only these two get headers.
 SECTIONS = [
-    ("whoami", "~/neofetch", "green"),
-    ("now playing", "~/doom", "red"),
-    ("experience", "~/work", "blue"),
     ("open source", "~/merged-prs", "purple"),
     ("research", "~/papers", "green"),
-    ("wins", "~/trophies", "gold"),
 ]
 
 
@@ -108,25 +103,21 @@ def main():
     prs = oss["prs"]
     research = profile.get("research", [])
 
-    rows = [(label, str(value).replace("{oss_prs}", str(oss["total"])))
-            for label, value in term["rows"]]
-
-    # drop numbered cards left over from a longer list
-    for pattern in ("pr-*.svg", "research-*.svg"):
+    # drop numbered cards left over from a longer list, and cards that moved
+    # into the terminal animation
+    for pattern in ("pr-*.svg", "research-*.svg", "section-*.svg",
+                    "neofetch.svg", "experience.svg", "wins.svg"):
         for old in glob.glob(os.path.join(ASSETS, "*", pattern)):
             os.remove(old)
 
     for theme in kit.THEMES:
-        write(theme, "neofetch.svg", kit.terminal(theme, term["user"], term["host"], rows, load_art(theme)))
         for i, (title, path, accent) in enumerate(SECTIONS):
             write(theme, section_file(title), kit.section(theme, f"{i + 1:02d}", title, path, accent))
-        write(theme, "experience.svg", kit.experience(theme, profile.get("experience", [])))
         for i, p in enumerate(prs):
             merged = datetime.date.fromisoformat(p["merged_at"][:10]).strftime("%b %Y")
             write(theme, f"pr-{i + 1}.svg", kit.pr_card(theme, p, merged))
         for i, item in enumerate(research):
             write(theme, f"research-{i + 1}.svg", kit.research_card(theme, item))
-        write(theme, "wins.svg", kit.wins(theme, profile.get("achievements", [])))
         write(theme, "footer.svg", kit.footer(theme, term["user"], term["host"]))
 
     pr_html = "\n".join(
