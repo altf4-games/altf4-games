@@ -2,7 +2,7 @@ name: Generate terminal animation
 
 on:
   schedule:
-    - cron: "43 4 * * 1"   # weekly (Monday) — refreshes the stats in the HUD
+    - cron: "43 4 * * *"   # daily — picks up newly merged PRs
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -10,8 +10,6 @@ on:
       - profile.yml
       - scripts/record_doom.sh
       - scripts/build_terminal_anim.py
-      - scripts/build_profile.py
-      - scripts/svg_kit.py
       - scripts/profile_data.py
       - ascii-art.html
       - .github/workflows/doom.yml

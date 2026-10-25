@@ -1,15 +1,11 @@
 name: Update README
 
 on:
-  schedule:
-    - cron: "17 3 * * *"   # daily — picks up newly merged PRs
   workflow_dispatch: {}    # manual run from the Actions tab
   push:
     branches: [main]
     paths:
       - profile.yml
-      - ascii-art.html
-      - README.md
       - scripts/build_profile.py
       - scripts/svg_kit.py
       - scripts/profile_data.py
@@ -35,9 +31,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests pyyaml
+        run: pip install pyyaml requests
 
-      - name: Build cards and README
+      - name: Build footer
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: altf4-games
@@ -48,6 +44,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A README.md assets data
+          git add -A assets
           git diff --staged --quiet || git commit -m "chore: update README"
           git push

@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------------
 # Single place to edit the profile README.
 # Edit this file (even from the GitHub web editor) and the workflows rebuild
-# the cards in assets/, the README and the Doom HUD.
+# the terminal animation (neofetch, Doom, wins, work, PRs) and the footer.
 #
 # Open-source PRs are NOT listed here: they are fetched from GitHub
 # automatically (merged PRs you authored in repos you don't own).
@@ -40,19 +40,7 @@ experience:
     when: 2016 – present
     what: 22 titles, 100k+ downloads · Captive ported to Nintendo via Upscale Studio
 
-research:
-  - kind: Paper
-    title: Gesture-Based Assistive Tool for Children with Speech and Hearing Impairments
-    venue: CVR 2026 · Springer LNNS 2250
-    url: https://doi.org/10.1007/978-3-032-39794-2_32
-  - kind: Manuscript
-    title: On-Device Assistive Perception for Blind Pedestrian Navigation and Sign-Language Communication
-    venue: Journal manuscript in preparation
-  - kind: Copyright
-    title: Sanketika — Indian Sign Language dataset
-    venue: Diary No. LD-22598/2025-CO · plus an Indian road-traffic detection dataset
-
-# Wins card + Doom HUD. Keep it to the best 3-4.
+# Shown in the terminal's `cat wins` and as Doom messages. Keep it to the best 3-4.
 achievements:
   - badge: Winner
     title: Hedera Track
@@ -66,5 +54,5 @@ achievements:
 
 # Auto-fetched open-source PR list.
 prs:
-  limit: 5            # how many cards to show
+  limit: 5            # how many PRs to show
   exclude_repos: []   # e.g. ["someorg/somerepo"] to hide a repo

@@ -16,7 +16,7 @@ DOOM=${DOOM:-/usr/games/chocolate-doom}
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 
-# plain 640x400 window, no aspect stretching, no in-game messages
+# plain 1280x800 window (4x Doom's native 320x200, so scaling stays crisp), no aspect stretching, no in-game messages
 # (the HUD script draws its own messages on top)
 cat > "$WORK/default.cfg" <<'EOF'
 show_messages 0
@@ -25,8 +25,8 @@ EOF
 cat > "$WORK/chocolate-doom.cfg" <<'EOF'
 fullscreen 0
 aspect_ratio_correct 0
-window_width 640
-window_height 400
+window_width 1280
+window_height 800
 grabmouse 0
 EOF
 
@@ -36,10 +36,10 @@ export SDL_AUDIODRIVER=dummy
   -config "$WORK/default.cfg" -extraconfig "$WORK/chocolate-doom.cfg" >/dev/null 2>&1 &
 PID=\$!
 sleep "$SKIP"
-ffmpeg -y -loglevel error -f x11grab -draw_mouse 0 -video_size 640x400 \
+ffmpeg -y -loglevel error -f x11grab -draw_mouse 0 -video_size 1280x800 \
   -framerate 15 -i "\$DISPLAY" -t "$SECONDS_TO_RECORD" -pix_fmt yuv420p "$OUT"
 kill \$PID || true
 EOF
 
-xvfb-run -a -s "-screen 0 640x400x24" bash "$WORK/run.sh"
+xvfb-run -a -s "-screen 0 1280x800x24" bash "$WORK/run.sh"
 echo "Recorded $OUT"
