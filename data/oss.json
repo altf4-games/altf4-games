@@ -14,7 +14,7 @@
       "title": "Add Hindi (hi) locale for frontend i18n",
       "url": "https://github.com/microsoft/data-formulator/pull/436",
       "merged_at": "2026-08-31T23:35:58Z",
-      "stars": 17596
+      "stars": 17595
     },
     {
       "repo": "ultralytics/ultralytics",
@@ -22,7 +22,7 @@
       "title": "Fix #25764: Don't send local project paths as Platform slugs",
       "url": "https://github.com/ultralytics/ultralytics/pull/25824",
       "merged_at": "2026-08-20T00:45:09Z",
-      "stars": 62819
+      "stars": 62826
     },
     {
       "repo": "microsoft/apm",
@@ -38,7 +38,7 @@
       "title": "fix: 2 agent bugs and improve test coverage",
       "url": "https://github.com/microsoft/data-formulator/pull/351",
       "merged_at": "2026-05-21T18:16:38Z",
-      "stars": 17596
+      "stars": 17595
     }
   ],
   "total": 5
